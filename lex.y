@@ -11,11 +11,12 @@
   void yyerror (const char *);
 }
 
-%union {char *s; int i;}
+%union {char *s; int in; int i;}
 
 %token <s> tID 
-%token <s> tNB
-%token tIF tELSE tWHILE tPRINT tRETURN tINT tVOID
+%token <in> tNB
+%token <i> tIF 
+%token tELSE tWHILE tPRINT tRETURN tINT tVOID
 %left tAND  tOR
 %left tADD tSUB
 %left tMUL tDIV
@@ -70,7 +71,7 @@ In :
   ;
 
 If : 
-    tIF tLPAR Inverse_Cond tRPAR Body  
+    tIF tLPAR Inverse_Cond tRPAR { printf("JMF %d %d", ts_last() , );}Body  {}
   | tIF tLPAR Inverse_Cond tRPAR Body Else
   ;
 Else :
@@ -103,11 +104,11 @@ ParamsFunc :
   ;
 
 exp :
-    tID   {Ts_new_tmp($1,false); Copy_Value($1); 
+    tID   {Increase_Instru(); Ts_new_tmp($1,false); Copy_Value($1); 
           printf("COP %d %d\n", ts_last(), Index_Symbole($1));
           } 
-  | tNB   {Ts_new_tmp($1,false); 
-          printf("AFC %d %s\n", ts_last(), $1);
+  | tNB   {Increase_Instru(); Ts_new_tmp($1,false); 
+          printf("AFC %d %d\n", ts_last(), $1);
           }
   ;
 
@@ -138,17 +139,17 @@ Inverse_Cond :
 
 Condition:
     Expression compare Expression 
-  | Condition tAND Condition
-  | Condition tOR Condition
-  | tLPAR Condition tRPAR
+  | Condition tAND Condition 
+  | Condition tOR Condition 
+  | tLPAR Condition tRPAR 
   ;
 
 Expression :
     exp
-  | Expression tADD Expression { printf("ADD %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
-  | Expression tSUB Expression { printf("SUB %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
-  | Expression tMUL Expression { printf("MUL %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
-  | Expression tDIV Expression { printf("DIV %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tADD Expression { Increase_Instru(); printf("ADD %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tSUB Expression { Increase_Instru(); printf("SUB %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tMUL Expression { Increase_Instru(); printf("MUL %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tDIV Expression { Increase_Instru(); printf("DIV %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
   | tLPAR Expression tRPAR
   
   ;

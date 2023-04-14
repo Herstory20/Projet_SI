@@ -6,6 +6,8 @@
 
 int profondeur_global = 0;
 int Current_lenght = 0;
+int Nb_Instruc = 0;
+instruction_list * ins_list;
 symbole_tab *symbol_table;
 
 
@@ -20,10 +22,15 @@ symbole Create_Symbole (char *nom, bool init) {
 }
 
 void Init(){
+    //pour la table de symbole
    symbol_table = malloc(sizeof(symbole_tab));
    symbol_table->first = NULL;
    symbol_table->last = NULL;
-   printf("Initialisé\n");
+
+   //pour la chaîne d'instruction à mémoriser
+   ins_list = malloc(sizeof(ins_list));
+   ins_list->first = NULL;
+   ins_list->last = NULL;
 }
 
 void Insert (symbole s) {
@@ -130,3 +137,21 @@ void Copy_Value(char *nom) {
     symbole * s = Search_Symbole(nom);
     strcpy(symbol_table->last->nom , s->nom);
 }
+
+void Increase_Instru() {
+    Nb_Instruc++;
+}
+
+int GetNB_Instruc() {
+    return Nb_Instruc;
+}
+
+//////////////////////////////////////////////// A CONTINUER POUR INSERER UNE INSTRUCTION DANS LA LIST INSTTRUCTION
+void Insert_instruction (char * ins){
+    ins
+    if (ins_list->first == NULL){
+        ins_list->first->
+    }
+    ins_list->last->suiv
+}
+

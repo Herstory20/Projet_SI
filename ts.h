@@ -5,7 +5,7 @@
 
 typedef struct symbole
     {
-        char nom[8];
+        char *nom;
         bool init;
         int profondeur;
         struct symbole *suiv;
@@ -16,6 +16,17 @@ typedef struct symbole_tab{
     symbole * first;
     symbole * last;
 } symbole_tab;
+
+typedef struct instruction{
+    char * ins;
+    struct instruction * suiv;
+}instruction;
+
+typedef struct instruction_list{
+    instruction * first;
+    instruction * last;
+}instruction_list;
+
 
 symbole Create_Symbole (char *nom, bool init);
 
@@ -46,5 +57,9 @@ void Decrease_Prof();
 int ts_last();
 
 void Copy_Value(char *nom);
+
+void Increase_Instru();
+
+int GetNB_Instruc();
 
 

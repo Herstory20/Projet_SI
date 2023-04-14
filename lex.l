@@ -15,7 +15,7 @@
 
 %%
 
-"if"                     { return tIF ;} 
+"if"                     { yylval.i = GetNB_Instruc(); return tIF ;} 
 "else"                   { return tELSE ; }
 "while"                  { return tWHILE ; }
 "print"                  { return tPRINT ; }
@@ -23,7 +23,7 @@
 "int"                    { return tINT ; }
 "void"                   { return tVOID ; }
 
-[0-9]+                  { yylval.s = strdup(yytext); return tNB; }
+[0-9]+                  { yylval.in = atoi(yytext); return tNB; }
 [a-zA-Z_][a-zA-Z0-9_]*  { yylval.s = strdup(yytext); return tID; }
 
 "//"[^\n]*
