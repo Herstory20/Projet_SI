@@ -11,9 +11,10 @@
   void yyerror (const char *);
 }
 
-%union {char *s;}
+%union {char *s; int i;}
 
-%token <s> tID tNB
+%token <s> tID 
+%token <s> tNB
 %token tIF tELSE tWHILE tPRINT tRETURN tINT tVOID
 %left tAND  tOR
 %left tADD tSUB
@@ -29,7 +30,12 @@ Funs :
   ;
 
 Fun :
-    type exp tLPAR Params tRPAR Body
+    type exp_Fun tLPAR Params tRPAR Body
+  ;
+
+exp_Fun :
+    tID  
+  | tNB  
   ;
 
 Params :
@@ -38,12 +44,15 @@ Params :
   ;
 
 param :
-    tINT tID { Ts_new($2,false); } 
+    tINT tID { Ts_new($2,false); }
   | tVOID  
   ;
 
 Body :
-    tLBRACE {Increase_Prof(); }INS tRBRACE {Delete_Prof(); Decrease_Prof();}
+    tLBRACE {Increase_Prof(); }INS tRBRACE {
+      Delete_Prof(); 
+      Decrease_Prof(); 
+      Current_Prof();}
   ;
 
 type :
@@ -94,8 +103,12 @@ ParamsFunc :
   ;
 
 exp :
-    tID 
-  | tNB 
+    tID   {Ts_new_tmp($1,false); Copy_Value($1); 
+          printf("COP %d %d\n", ts_last(), Index_Symbole($1));
+          } 
+  | tNB   {Ts_new_tmp($1,false); 
+          printf("AFC %d %s\n", ts_last(), $1);
+          }
   ;
 
 Declaration :
@@ -132,10 +145,10 @@ Condition:
 
 Expression :
     exp
-  | Expression tADD Expression
-  | Expression tSUB Expression
-  | Expression tMUL Expression
-  | Expression tDIV Expression
+  | Expression tADD Expression { printf("ADD %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tSUB Expression { printf("SUB %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tMUL Expression { printf("MUL %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tDIV Expression { printf("DIV %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
   | tLPAR Expression tRPAR
   
   ;
