@@ -31,12 +31,17 @@ Funs :
   ;
 
 Fun :
-    type exp_Fun tLPAR Params tRPAR Body
+    tINT tID tLPAR Arguments tRPAR Fun_Body
+    tVOID tID tLPAR Arguments tRPAR Body
   ;
 
-exp_Fun :
-    tID  
-  | tNB  
+Fun_Body :
+    tLBRACE INS Return tRBRACE 
+  ;
+
+Arguments :
+    tVOID
+  | Params
   ;
 
 Params :
@@ -45,8 +50,7 @@ Params :
   ;
 
 param :
-    tINT tID { Ts_new($2,false); }
-  | tVOID  
+    tINT tID { printf("--------------  %s\n", $2);Ts_new($2,false); }
   ;
 
 Body :
@@ -56,24 +60,19 @@ Body :
       Current_Prof();}
   ;
 
-type :
-    tINT
-  | tVOID 
-  ;
-
 In :
     If 
   | While
   | Print
   | Assign 
-  | Declaration 
-  | Return
+  | tINT Declaration 
   ;
 
 If : 
-    tIF tLPAR Inverse_Cond tRPAR { printf("JMF %d %d", ts_last() , );}Body  {}
+    tIF tLPAR Inverse_Cond tRPAR Body 
   | tIF tLPAR Inverse_Cond tRPAR Body Else
   ;
+
 Else :
     tELSE Body 
   ;
@@ -88,15 +87,8 @@ Print :
 
 Assign :
     tID tASSIGN Expression tSEMI 
-  | tID tASSIGN tID tLPAR ParamsFunc tRPAR tSEMI  
-  | tID tASSIGN tID tLPAR tRPAR tSEMI 
   ;
 
-Assign_Declaration:
-    tID tASSIGN Expression tSEMI { Ts_new($1,true); }
-  | tID tASSIGN tID tLPAR ParamsFunc tRPAR tSEMI  { Ts_new($1,true); }
-  | tID tASSIGN tID tLPAR tRPAR tSEMI { Ts_new($1,true); }
-  ;
 
 ParamsFunc :
     Expression
@@ -107,16 +99,17 @@ exp :
     tID   {Increase_Instru(); Ts_new_tmp($1,false); Copy_Value($1); 
           printf("COP %d %d\n", ts_last(), Index_Symbole($1));
           } 
+  | tID tLPAR ParamsFunc tRPAR
+  | tID tLPAR tRPAR 
   | tNB   {Increase_Instru(); Ts_new_tmp($1,false); 
           printf("AFC %d %d\n", ts_last(), $1);
           }
   ;
 
 Declaration :
-    tINT tID tSEMI { Ts_new($2,false); } 
-  | tINT tID tCOMMA { Ts_new($2,false); } Declaration 
-  | tINT tID tCOMMA {  Ts_new($2,true); } Assign_Declaration
-  | tINT Assign_Declaration 
+    tID tSEMI { Ts_new($1,false); } 
+  | tID tCOMMA { Ts_new($1,false); } Declaration 
+  | tID tASSIGN Expression tSEMI { Ts_new($1,true); }
   ;
 
 Return :
@@ -146,10 +139,12 @@ Condition:
 
 Expression :
     exp
-  | Expression tADD Expression { Increase_Instru(); printf("ADD %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
-  | Expression tSUB Expression { Increase_Instru(); printf("SUB %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
-  | Expression tMUL Expression { Increase_Instru(); printf("MUL %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
-  | Expression tDIV Expression { Increase_Instru(); printf("DIV %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tADD Expression { Insert_instruction("ADD",ts_last()-1,ts_last()-1,ts_last());
+                                  Increase_Instru(); printf("ADD %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();
+                                  print_list();}
+  | Expression tSUB Expression { Insert_instruction("SUB",ts_last()-1,ts_last()-1,ts_last()) ;Increase_Instru(); printf("SUB %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tMUL Expression { Insert_instruction("MUL",ts_last()-1,ts_last()-1,ts_last()) ;Increase_Instru(); printf("MUL %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tDIV Expression { Insert_instruction("DIV",ts_last()-1,ts_last()-1,ts_last()) ;Increase_Instru(); printf("DIV %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
   | tLPAR Expression tRPAR
   
   ;

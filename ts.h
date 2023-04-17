@@ -5,7 +5,7 @@
 
 typedef struct symbole
     {
-        char *nom;
+        char nom[16];
         bool init;
         int profondeur;
         struct symbole *suiv;
@@ -18,7 +18,7 @@ typedef struct symbole_tab{
 } symbole_tab;
 
 typedef struct instruction{
-    char * ins;
+    char ins[32];
     struct instruction * suiv;
 }instruction;
 
@@ -62,4 +62,10 @@ void Increase_Instru();
 
 int GetNB_Instruc();
 
+void Insert_instruction (char ins1[5],int ins2,int ins3,int ins4);
+
+void Concat (char * ins,char ins1[5],int ins2,int ins3,int ins4);
+
+
+void print_list();
 

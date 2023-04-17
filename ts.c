@@ -12,7 +12,7 @@ symbole_tab *symbol_table;
 
 
 symbole Create_Symbole (char *nom, bool init) {
-    symbole s;
+    symbole s ;
     strcpy(s.nom,nom);
     s.init = init;
     s.profondeur = profondeur_global;
@@ -26,11 +26,11 @@ void Init(){
    symbol_table = malloc(sizeof(symbole_tab));
    symbol_table->first = NULL;
    symbol_table->last = NULL;
-
    //pour la chaîne d'instruction à mémoriser
    ins_list = malloc(sizeof(ins_list));
    ins_list->first = NULL;
    ins_list->last = NULL;
+   printf("Bien initialisé\n");
 }
 
 void Insert (symbole s) {
@@ -56,8 +56,8 @@ void Insert (symbole s) {
 void Delete_Last() {
     symbole *tmp = symbol_table->last;
     symbol_table->last=symbol_table->last->prec;
-    printf("Last Deleted %s\n", tmp->nom);
-    printf("Current Last %s\n", symbol_table->last->nom);
+    //printf("Last Deleted %s\n", tmp->nom);
+    //printf("Current Last %s\n", symbol_table->last->nom);
     if (symbol_table->last == NULL) symbol_table->first = NULL;
     free(tmp);
     Current_lenght--;
@@ -106,13 +106,13 @@ void Update_Init (symbole s){
 
 void Ts_new(char *nom, bool init){ 
     symbole s = Create_Symbole(nom,init);
-    printf(" ----------- Insertion symbole %s\n",nom); 
+    //printf(" ----------- Insertion symbole %s\n",nom); 
     Insert(s);
 }
 
 void Ts_new_tmp (){
     symbole tmp = Create_Symbole("tmp",false);
-    printf(" ----------- Insertion symbole %s\n",tmp.nom); 
+    //printf(" ----------- Insertion symbole %s\n",tmp.nom); 
     Insert(tmp);
 }
 
@@ -146,12 +146,45 @@ int GetNB_Instruc() {
     return Nb_Instruc;
 }
 
-//////////////////////////////////////////////// A CONTINUER POUR INSERER UNE INSTRUCTION DANS LA LIST INSTTRUCTION
-void Insert_instruction (char * ins){
-    ins
+void Insert_instruction (char ins1[5],int ins2,int ins3,int ins4){
+    char ins[32] = "";
+    Concat(ins,ins1,ins2,ins3,ins4);
+    instruction *ele = malloc(sizeof(ele));
+    strcpy(ele->ins,ins);
+    ele->suiv=NULL;
     if (ins_list->first == NULL){
-        ins_list->first->
+        ins_list->first = ele ;
+        ins_list->last = ele;
+        printf("Insertion vide de %s\n", ins_list->first->ins);
     }
-    ins_list->last->suiv
+    else {
+        ins_list->last->suiv = ele;
+        ins_list->last = ele;
+        printf("insertion non vide de %s\n", ele->ins);
+    }
 }
 
+void Concat (char * ins,char ins1[5],int ins2,int ins3,int ins4){
+    char tmp[32];
+    strcat(ins,ins1);
+    strcat(ins," ");
+    sprintf(tmp,"%d ",ins2);
+   
+    strcat(ins,tmp);
+    if(ins3 != -1){
+        sprintf(tmp,"%d ",ins3);
+        strcat(ins,tmp);
+    }
+    if(ins4 != -1){
+        sprintf(tmp,"%d ",ins4);
+        strcat(ins,tmp);
+    }
+}
+
+void print_list(){
+    instruction * aux = ins_list->first;
+    while (aux != NULL){
+        printf("------------------------------------------%s\n",aux->ins);
+        aux = aux->suiv;
+    }
+}
