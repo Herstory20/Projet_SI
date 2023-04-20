@@ -50,7 +50,7 @@ Params :
   ;
 
 param :
-    tINT tID { printf("--------------  %s\n", $2);Ts_new($2,false); }
+    tINT tID { Ts_new($2,false); }
   ;
 
 Body :
@@ -69,9 +69,11 @@ In :
   ;
 
 If : 
-    tIF tLPAR Inverse_Cond tRPAR Body 
-  | tIF tLPAR Inverse_Cond tRPAR Body Else
+    tIF tLPAR Inverse_Cond tRPAR X Body {Modif_ins_list(getTab());}
+  | tIF tLPAR Inverse_Cond tRPAR X Body Else 
   ;
+
+X : %empty  { Insert_instruction("JMPF",ts_last(),-1,-1); setTab(GetNB_Instruc()); } ;
 
 Else :
     tELSE Body 
@@ -82,7 +84,7 @@ While :
   ;
 
 Print :
-    tPRINT tLPAR tID tRPAR tSEMI  
+    tPRINT tLPAR exp tRPAR tSEMI  { Insert_instruction("PRI",ts_last(),-1,-1); Delete_Last();}
   ;
 
 Assign :
@@ -96,13 +98,13 @@ ParamsFunc :
   ;
 
 exp :
-    tID   {Increase_Instru(); Ts_new_tmp($1,false); Copy_Value($1); 
-          printf("COP %d %d\n", ts_last(), Index_Symbole($1));
+    tID   {Ts_new_tmp(); Copy_Value($1); 
+          Insert_instruction("COP",ts_last(),Index_Symbole($1),-1);
           } 
   | tID tLPAR ParamsFunc tRPAR
   | tID tLPAR tRPAR 
-  | tNB   {Increase_Instru(); Ts_new_tmp($1,false); 
-          printf("AFC %d %d\n", ts_last(), $1);
+  | tNB   { Ts_new_tmp(); 
+          Insert_instruction("AFC",ts_last(),$1,-1);
           }
   ;
 
@@ -116,35 +118,30 @@ Return :
     tRETURN Expression tSEMI 
   ;
 
-compare :
-    tLT
-  | tGT
-  | tGE
-  | tNE
-  | tEQ
-  | tLE
-  ;
 
 Inverse_Cond :
     Condition
-  | tNOT Condition
+  | tNOT Condition { Insert_instruction("NOT",ts_last(),ts_last(),-1); }
   ;
 
 Condition:
-    Expression compare Expression 
-  | Condition tAND Condition 
-  | Condition tOR Condition 
-  | tLPAR Condition tRPAR 
+    tLPAR Condition tRPAR 
+  | Expression tLT Expression { Insert_instruction("INF",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Expression tGT Expression { Insert_instruction("SUP",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Expression tGE Expression { Insert_instruction("SUPE",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Expression tNE Expression { Insert_instruction("NEQ",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Expression tEQ Expression { Insert_instruction("EQU",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Expression tLE Expression { Insert_instruction("INFE",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Condition tAND Condition  { Insert_instruction("AND",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Condition tOR Condition   { Insert_instruction("OR",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
   ;
 
 Expression :
     exp
-  | Expression tADD Expression { Insert_instruction("ADD",ts_last()-1,ts_last()-1,ts_last());
-                                  Increase_Instru(); printf("ADD %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();
-                                  print_list();}
-  | Expression tSUB Expression { Insert_instruction("SUB",ts_last()-1,ts_last()-1,ts_last()) ;Increase_Instru(); printf("SUB %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
-  | Expression tMUL Expression { Insert_instruction("MUL",ts_last()-1,ts_last()-1,ts_last()) ;Increase_Instru(); printf("MUL %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
-  | Expression tDIV Expression { Insert_instruction("DIV",ts_last()-1,ts_last()-1,ts_last()) ;Increase_Instru(); printf("DIV %d %d %d\n", ts_last() - 1, ts_last() - 1, ts_last()); Delete_Last();}
+  | Expression tADD Expression { Insert_instruction("ADD",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Expression tSUB Expression { Insert_instruction("SUB",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Expression tMUL Expression { Insert_instruction("MUL",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
+  | Expression tDIV Expression { Insert_instruction("DIV",ts_last()-1,ts_last()-1,ts_last()) ; Delete_Last();}
   | tLPAR Expression tRPAR
   
   ;
@@ -164,4 +161,5 @@ void yyerror(const char *msg) {
 int main(void) {
   Init();
   yyparse();
+  print_list();
 }

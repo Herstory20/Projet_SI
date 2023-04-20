@@ -66,6 +66,10 @@ void Insert_instruction (char ins1[5],int ins2,int ins3,int ins4);
 
 void Concat (char * ins,char ins1[5],int ins2,int ins3,int ins4);
 
-
 void print_list();
 
+void Modif_ins_list(int ifPosition);
+
+int getTab ();
+
+void setTab (int j);

@@ -15,7 +15,7 @@
 
 %%
 
-"if"                     { yylval.i = GetNB_Instruc(); return tIF ;} 
+"if"                     { return tIF ;} 
 "else"                   { return tELSE ; }
 "while"                  { return tWHILE ; }
 "print"                  { return tPRINT ; }

@@ -9,6 +9,20 @@ int Current_lenght = 0;
 int Nb_Instruc = 0;
 instruction_list * ins_list;
 symbole_tab *symbol_table;
+int tab[10];
+int i =0 ;
+int h =-1 ;
+
+int getTab () {
+    h++;
+    return tab[h];
+}
+
+
+void setTab (int j) {
+    tab[i]=j;
+    i++;
+}
 
 
 symbole Create_Symbole (char *nom, bool init) {
@@ -149,28 +163,27 @@ int GetNB_Instruc() {
 void Insert_instruction (char ins1[5],int ins2,int ins3,int ins4){
     char ins[32] = "";
     Concat(ins,ins1,ins2,ins3,ins4);
-    instruction *ele = malloc(sizeof(ele));
-    strcpy(ele->ins,ins);
-    ele->suiv=NULL;
     if (ins_list->first == NULL){
-        ins_list->first = ele ;
-        ins_list->last = ele;
-        printf("Insertion vide de %s\n", ins_list->first->ins);
+        ins_list->first = malloc(sizeof(instruction));
+        strcpy(ins_list->first->ins,ins);
+        ins_list->last = ins_list->first;
     }
     else {
-        ins_list->last->suiv = ele;
-        ins_list->last = ele;
-        printf("insertion non vide de %s\n", ele->ins);
+        ins_list->last->suiv = malloc(sizeof(instruction));
+        strcpy(ins_list->last->suiv->ins, ins);
+        ins_list->last = ins_list->last->suiv;
     }
+    Increase_Instru();
 }
 
 void Concat (char * ins,char ins1[5],int ins2,int ins3,int ins4){
     char tmp[32];
     strcat(ins,ins1);
     strcat(ins," ");
-    sprintf(tmp,"%d ",ins2);
-   
-    strcat(ins,tmp);
+    if(ins2 != -1){
+        sprintf(tmp,"%d ",ins2);
+        strcat(ins,tmp);
+    }
     if(ins3 != -1){
         sprintf(tmp,"%d ",ins3);
         strcat(ins,tmp);
@@ -187,4 +200,16 @@ void print_list(){
         printf("------------------------------------------%s\n",aux->ins);
         aux = aux->suiv;
     }
+}
+
+void Modif_ins_list(int ifPosition){
+    instruction * aux = ins_list->first;
+    for(int j=0 ; j<ifPosition-1 ; j++){
+        aux = aux->suiv;
+    }
+    char tmp[32];
+    sprintf(tmp,"%d ",GetNB_Instruc()+1);
+    Concat(aux->ins,tmp,-1,-1,-1);
+    printf("********** %s\n", aux->ins);
+
 }
