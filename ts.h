@@ -3,6 +3,15 @@
 #include <stdlib.h>
 #include <stdbool.h> 
 
+typedef struct Node {
+    int pos;
+    struct Node * next;
+}Node;
+
+typedef struct {
+    Node * top;
+}FILO;
+
 typedef struct symbole
     {
         char nom[16];
@@ -70,6 +79,8 @@ void print_list();
 
 void Modif_ins_list(int ifPosition);
 
-int getTab ();
+FILO * create_filo();
 
-void setTab (int j);
+void push(int pos);
+
+int pop();

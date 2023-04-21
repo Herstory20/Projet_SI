@@ -9,21 +9,34 @@ int Current_lenght = 0;
 int Nb_Instruc = 0;
 instruction_list * ins_list;
 symbole_tab *symbol_table;
-int tab[10];
-int i =0 ;
-int h =-1 ;
+FILO * filo ;
 
-int getTab () {
-    h++;
-    return tab[h];
+FILO * create_filo(){
+    FILO * filo = malloc(sizeof(FILO));
+    filo->top = NULL;
+    return filo;
 }
 
-
-void setTab (int j) {
-    tab[i]=j;
-    i++;
+void push(int pos){
+    Node * node = malloc(sizeof(Node));
+    node->pos = pos;
+    node->next = filo->top;
+    filo->top = node;
 }
 
+int pop(){
+    int res = 0;
+    if(filo->top != NULL){
+        Node * node = filo->top;
+        res = node->pos;
+        filo->top = node->next;
+        free(node);
+    }else{
+        printf("Stack Underflow\n");
+        res = -1;
+    }
+    return res;
+}
 
 symbole Create_Symbole (char *nom, bool init) {
     symbole s ;
@@ -45,6 +58,9 @@ void Init(){
    ins_list->first = NULL;
    ins_list->last = NULL;
    printf("Bien initialisé\n");
+
+   //init la filo
+   filo = create_filo();
 }
 
 void Insert (symbole s) {
@@ -196,8 +212,10 @@ void Concat (char * ins,char ins1[5],int ins2,int ins3,int ins4){
 
 void print_list(){
     instruction * aux = ins_list->first;
+    int i = 0;
     while (aux != NULL){
-        printf("------------------------------------------%s\n",aux->ins);
+        printf("%d ------------%s\n",i, aux->ins);
+        i++;
         aux = aux->suiv;
     }
 }
@@ -211,5 +229,4 @@ void Modif_ins_list(int ifPosition){
     sprintf(tmp,"%d ",GetNB_Instruc()+1);
     Concat(aux->ins,tmp,-1,-1,-1);
     printf("********** %s\n", aux->ins);
-
 }

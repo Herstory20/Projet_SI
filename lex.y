@@ -69,11 +69,14 @@ In :
   ;
 
 If : 
-    tIF tLPAR Inverse_Cond tRPAR X Body {Modif_ins_list(getTab());}
-  | tIF tLPAR Inverse_Cond tRPAR X Body Else 
+    tIF tLPAR Inverse_Cond tRPAR X Body {Modif_ins_list(pop());}
+  | tIF tLPAR Inverse_Cond tRPAR X Body Y Else {Modif_ins_list(pop());}
   ;
 
-X : %empty  { Insert_instruction("JMPF",ts_last(),-1,-1); setTab(GetNB_Instruc()); } ;
+X : %empty  { Insert_instruction("JMPF",ts_last(),-1,-1); push(GetNB_Instruc()); } ;
+
+Y : %empty {Modif_ins_list(pop());Insert_instruction("JMP",-1,-1,-1); 
+printf("****---------**** %d\n", GetNB_Instruc()); push(GetNB_Instruc());}
 
 Else :
     tELSE Body 

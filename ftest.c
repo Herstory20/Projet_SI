@@ -1,13 +1,12 @@
 int compute(int a, int d) {
     int b, c = a + d * 5;
-    b = a;
+    
 
     if (!(a == 3)) {
     print(a);
+
     }
-    if (!(a == 3)) {
-    print(a);
-    }
+    
     return b;
 }
 
