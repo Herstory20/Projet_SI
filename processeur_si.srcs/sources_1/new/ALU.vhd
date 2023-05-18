@@ -45,27 +45,27 @@ end ALU;
 
 architecture Behavioral of ALU is
 
-    signal Temp_res : STD_LOGIC_VECTOR (8 downto 0) := (others => '0');
+    signal Temp_res : STD_LOGIC_VECTOR (15 downto 0) := (others => '0');
     signal Aux : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
     
 begin
 
     S <= Aux ;
     
-    process
+    process (A,B,Ctrl_Alu,Temp_res) is
     begin
         case Ctrl_Alu is
-            when x"01" => Temp_res <= ('0'+A) + ('0'+B);   
-            when x"10" => Temp_res <= ('0'+A) * ('0'+B);
-            when x"11" => Temp_res <= ('0'+A) - ('0'+B);
+            when b"001" => Temp_res <= ("00000000" & A) + ("00000000" & B);   
+            when b"010" => Temp_res <= A*B;
+            when b"011" => Temp_res <= ("00000000" & A) - ("00000000" & B);
             --when x"100" => Temp_res <= ('0'+A) / ('0'+B);
-            when others => Aux <= x"00000000" ;
+            when others => Aux <= x"00" ;
         end case;
         Aux <= Temp_res(7 downto 0);
-        if Aux < x"00000000" then N<= '1'; else N<='0'; end if;
-        if Temp_res(8)='1' then O<= '1'; else O<='0'; end if;
-        if Aux = x"00000000" then Z <='1'; else Z<='0'; end if;
-        if Temp_res(8)='1' then C <= '1'; else C<='0'; end if;
+        if Aux < x"00000000" then N<= '1'; else N<='0'; end if; -- N= négatif
+        if Temp_res(15 downto 8)>0 then O<= '1'; else O<='0'; end if;  -- Overflow
+        if Aux = x"00000000" then Z <='1'; else Z<='0'; end if; -- sortie nulle
+        if Temp_res(8)='1' then C <= '1'; else C<='0'; end if; -- retenue
     end process;
 
 end Behavioral;

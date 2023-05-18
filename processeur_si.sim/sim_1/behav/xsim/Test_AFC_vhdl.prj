@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../processeur_si.srcs/sources_1/new/ALU.vhd" \
+"../../../../processeur_si.srcs/sources_1/new/BR.vhd" \
+"../../../../processeur_si.srcs/sources_1/new/PipeLine.vhd" \
+"../../../../processeur_si.srcs/sources_1/new/processor.vhd" \
+"../../../../processeur_si.srcs/sim_1/new/Test_AFC.vhd" \
+
+# Do not sort compile order
+nosort

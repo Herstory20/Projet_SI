@@ -32,13 +32,12 @@ library UNISIM;
 use UNISIM.VComponents.all;
 
 entity BR is
-    Port ( AddrA : in STD_LOGIC_VECTOR (3 downto 0);
-           AddrB : in STD_LOGIC_VECTOR (3 downto 0);
-           AddrW : in STD_LOGIC_VECTOR (3 downto 0);
+    Port ( AddrA : in STD_LOGIC_VECTOR (7 downto 0);
+           AddrB : in STD_LOGIC_VECTOR (7 downto 0);
+           AddrW : in STD_LOGIC_VECTOR (7 downto 0);
            W : in STD_LOGIC;
            DATA : in STD_LOGIC_VECTOR (7 downto 0);
            RST : in STD_LOGIC;
-           CLK : in STD_LOGIC;
            QA : out STD_LOGIC_VECTOR (7 downto 0);
            QB : out STD_LOGIC_VECTOR (7 downto 0));
 end BR;
@@ -48,12 +47,11 @@ architecture Behavioral of BR is
     signal bancreg : reg_array := (others => (others => '0'));
 begin
 
-    process 
+    process (RST, AddrA, AddrB, AddrW, W) is 
         begin
             if (RST = '1') then
              bancreg <= (others => (others => '0'));
             else
-                wait until CLK'event and CLK='1';
                 if W ='1' then bancreg(to_integer(unsigned(AddrW))) <= DATA;
                 end if;
             end if;
