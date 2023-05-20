@@ -154,10 +154,9 @@ architecture Behavioral of processor is
     
 begin
 
-   Qa <= Qa_reg;
-   Qb <= Qb_reg;
+   Qa <= QA_reg;
+   Qb <= QB_reg;
    
-
    
    mem_ins : MI PORT MAP (
        addr => IP,
@@ -174,8 +173,7 @@ begin
        C_in  => C_li,
        OP_in  => OP_li,
        A_out  => A_di,
-       B_out  => B_di, 
-       --B_out => Addr_Areg,
+       B_out => Addr_Areg,
        --C_out => Addr_Breg,
        C_out  => C_di,
        OP_out  => OP_di,
@@ -183,15 +181,14 @@ begin
     );
     
     --Multiplexeur DI
-   -- Mux_di <= Addr_Areg WHEN OP_di = x"06" 
-   --         ELSE Addr_Areg WHEN OP_di = x"07" 
-       --     ELSE QA_reg;
+    Mux_di <= Addr_Areg WHEN OP_di = x"06" 
+            ELSE Addr_Areg WHEN OP_di = x"07" 
+            ELSE QA_reg;
     
     
     pipdiex: PipeLine PORT MAP (
        A_in => A_di,
-      -- B_in  => Mux_di,
-       B_in => B_di,
+       B_in  => Mux_di,
        C_in  => C_di,
        OP_in  => OP_di,
        A_out  => A_ex,
@@ -256,7 +253,9 @@ begin
        CLK => CLK
     );
     
-    W_reg <= '1' when OP_re = x"06" else '0';
+    W_reg <= '1' when OP_re = x"06" 
+             else  '1' when OP_re = x"07"
+             else '0';
     
     banc_registre : BR PORT MAP(
        AddrA =>  Addr_Areg,
