@@ -32,10 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity processor is
-    Port ( A_pro : in STD_LOGIC_VECTOR (7 downto 0);
-           B_pro : in STD_LOGIC_VECTOR (7 downto 0);
-           C_pro : in STD_LOGIC_VECTOR (7 downto 0);
-           OP_pro : in STD_LOGIC_VECTOR (7 downto 0);
+    Port (
            Qa : out std_logic_vector (7 downto 0);
            Qb : out std_logic_vector (7 downto 0);
            CLK : in STD_LOGIC
@@ -103,10 +100,10 @@ architecture Behavioral of processor is
         );
     END COMPONENT;
     
-    signal A_li :std_logic_vector(7 downto 0) := A_pro ;
-    signal B_li :std_logic_vector(7 downto 0) := B_pro ;
-    signal C_li :std_logic_vector(7 downto 0) := C_pro ;
-    signal OP_li :std_logic_vector(7 downto 0) := OP_pro ;
+    signal A_li :std_logic_vector(7 downto 0) ;
+    signal B_li :std_logic_vector(7 downto 0) ;
+    signal C_li :std_logic_vector(7 downto 0) ;
+    signal OP_li :std_logic_vector(7 downto 0) ;
     
     signal A_di :std_logic_vector(7 downto 0) ;
     signal B_di :std_logic_vector(7 downto 0) ;
@@ -151,19 +148,16 @@ architecture Behavioral of processor is
     signal Input_data : STD_LOGIC_VECTOR (7 downto 0);
     signal Output_data : STD_LOGIC_VECTOR (7 downto 0);
     
-    signal IP : STD_LOGIC_VECTOR (7 downto 0);
+    signal IP : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
     
   
     
 begin
 
-   Qa <= B_li;
-   Qb <= B_di;
+   Qa <= Qa_reg;
+   Qb <= Qb_reg;
    
-   --A_li <= A_pro;
-   --B_li <= B_pro;
-   --C_li <= C_pro;
-   --OP_li <= OP_pro;
+
    
    mem_ins : MI PORT MAP (
        addr => IP,
@@ -218,16 +212,16 @@ begin
         --            else b"011" when OP_ex = x"03" 
             --        else b"000";
                   
-     ual : ALU PORT MAP(
-              A => B_ex,
-              B => C_ex,
-              S => S_alu,
-              N => N_alu,
-              O => O_alu,
-              Z => Z_alu,
-              C => C_alu,
-              Ctrl_Alu => Ctrl_Alu
-           );
+     --ual : ALU PORT MAP(
+       --       A => B_ex,
+         --     B => C_ex,
+           --   S => S_alu,
+             -- N => N_alu,
+             -- O => O_alu,
+             -- Z => Z_alu,
+             -- C => C_alu,
+             -- Ctrl_Alu => Ctrl_Alu
+           --);
        
     pipexmem: PipeLine PORT MAP (
        A_in => A_ex,
@@ -242,14 +236,14 @@ begin
        CLK => CLK
     );
     -- Faire le LC et le MUX (fig 4)
-    mem_data : MD PORT MAP ( 
-       addr  => B_mem,
-       Ent => Input_data,
-       RW  => RW_data,
-       RST => RST_data,
-       CLK => CLK,
-       Sort => Output_data
-    );
+ --   mem_data : MD PORT MAP ( 
+  --     addr  => B_mem,
+  --     Ent => Input_data,
+  --     RW  => RW_data,
+   --    RST => RST_data,
+    --   CLK => CLK,
+     --  Sort => Output_data
+    --);
     pipmemre: PipeLine PORT MAP (
        A_in => A_mem,
        B_in  => B_mem,

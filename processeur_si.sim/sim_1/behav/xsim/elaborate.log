@@ -1,6 +1,6 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto ea89b971ef374288afa1cec0899549b2 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_MI_behav xil_defaultlib.Test_MI -log elaborate.log 
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto ea89b971ef374288afa1cec0899549b2 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_AFC_behav xil_defaultlib.Test_AFC -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -13,5 +13,8 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package unisim.vcomponents
 Compiling architecture behavioral of entity xil_defaultlib.MI [mi_default]
-Compiling architecture behavioral of entity xil_defaultlib.test_mi
-Built simulation snapshot Test_MI_behav
+Compiling architecture behavioral of entity xil_defaultlib.PipeLine [pipeline_default]
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.processor [processor_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_afc
+Built simulation snapshot Test_AFC_behav
