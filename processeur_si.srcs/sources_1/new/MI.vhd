@@ -25,6 +25,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -43,8 +44,10 @@ architecture Behavioral of MI is
     
 begin
 
-    mi <= (x"00060206", x"06060606", x"00000006", x"00000000", x"00000000", x"03030201", 
-    x"00000000", x"00000000", x"00000000", x"08000300", x"07FF0000", others => x"00000000");
+    mi <= (x"01060400", x"00000000", x"00000000", x"00000000",x"00000000", 
+        x"02060500", x"00000000", x"00000000", x"00000000",x"00000000", 
+    x"02080100", x"04070200", x"00000000", x"00000000", x"00000000", x"00000000",
+    others => x"00000402");
 
      process 
        begin

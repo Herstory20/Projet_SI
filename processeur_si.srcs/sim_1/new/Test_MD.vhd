@@ -50,7 +50,7 @@ architecture Behavioral of Test_MD is
 
 
 signal B_mem :std_logic_vector(7 downto 0) := (others => '0');
-signal RW_data : std_logic := '0';
+signal RW_data : std_logic := '1' ; --lecture;
 signal RST_data : std_logic := '0';
 signal Input_data : STD_LOGIC_VECTOR (7 downto 0);
 signal Output_data : STD_LOGIC_VECTOR (7 downto 0);
@@ -83,17 +83,28 @@ begin
 
 wait for 100 ns;
 
--- Ecriture
-Input_data <= x"01";
-wait for 100 ns;
-
-RW_data <= '1';
-wait for 100ns;
-
 RST_data <= '1';
 wait for 100ns ;
+
 RST_data <='0';
 wait for 100ns ;
+
+-- ecriture
+RW_data <= '0';
+B_mem <= x"01";
+Input_data <= x"02";
+wait for 100 ns;
+
+-- lecture
+RW_data <= '1';
+B_mem <= x"01";
+wait for 100 ns;
+
+-- lecture
+B_mem <= x"02";
+wait for 100 ns;
+
+
 wait;
 end process;
 

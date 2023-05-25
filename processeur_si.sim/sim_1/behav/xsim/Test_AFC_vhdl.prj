@@ -1,6 +1,8 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../processeur_si.srcs/sources_1/new/ALU.vhd" \
 "../../../../processeur_si.srcs/sources_1/new/BR.vhd" \
+"../../../../processeur_si.srcs/sources_1/new/MD.vhd" \
 "../../../../processeur_si.srcs/sources_1/new/MI.vhd" \
 "../../../../processeur_si.srcs/sources_1/new/PipeLine.vhd" \
 "../../../../processeur_si.srcs/sources_1/new/processor.vhd" \

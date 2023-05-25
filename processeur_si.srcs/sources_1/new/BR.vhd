@@ -47,6 +47,7 @@ architecture Behavioral of BR is
     signal bancreg : reg_array := (others => (others => '0'));
 begin
 
+
     process (RST, AddrA, AddrB, AddrW, W) is 
         begin
             if (RST = '1') then

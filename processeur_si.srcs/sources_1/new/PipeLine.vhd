@@ -40,7 +40,8 @@ entity PipeLine is
            B_out : out STD_LOGIC_VECTOR (7 downto 0);
            C_out : out STD_LOGIC_VECTOR (7 downto 0);
            OP_out : out STD_LOGIC_VECTOR (7 downto 0);
-           CLK : in STD_LOGIC);
+           CLK : in STD_LOGIC;
+           RST : in STD_LOGIC);
 end PipeLine;
 
 architecture Behavioral of PipeLine is

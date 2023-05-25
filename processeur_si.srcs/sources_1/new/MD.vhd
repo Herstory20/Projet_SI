@@ -45,14 +45,16 @@ architecture Behavioral of MD is
   signal md : reg_array := (others => (others => '0'));
 
 begin
+    
     process 
         begin
-            wait until CLK'event and CLK='1';
+            wait until CLK'event and CLK='0';
             if (RST = '1') then
              md <= (others => (others => '0'));
             else
-                if RW ='0' then md(to_integer(unsigned(addr))) <= Ent;
-                else Sort <= md(to_integer(unsigned(addr))); 
+                if RW ='0' then md(to_integer(unsigned(addr))) <= Ent;  -- 0 écriture
+                    Sort <= md(to_integer(unsigned(addr)));
+                else Sort <= md(to_integer(unsigned(addr))); -- 1 lecture 
                 end if;
             end if;
     end process;

@@ -41,21 +41,24 @@ COMPONENT processor
     PORT(
           Qa : out std_logic_vector(7 downto 0);
           Qb : out std_logic_vector(7 downto 0);
+          RST : in STD_LOGIC;
           CLK : in STD_LOGIC
     );
 END COMPONENT;
 
-signal Qa_Test :std_logic_vector(7 downto 0) := (others => '0');
-signal Qb_Test :std_logic_vector(7 downto 0) := (others => '0');
-signal Test_OP_pro :std_logic_vector(7 downto 0) := x"06";
-signal Mon_horloge_de_test : std_logic := '0';
-signal Clock_period : time := 100ns;
+signal Qa_Test :std_logic_vector(7 downto 0);
+signal Qb_Test :std_logic_vector(7 downto 0);
+
+signal Mon_horloge_de_test : std_logic := '0' ;
+signal RST_test : std_logic := '0' ;
+signal Clock_period : time := 10 ns;
 
 begin
 
 proc : processor PORT MAP (
     Qa => Qa_Test,
     Qb => Qb_Test,
+    RST=> RST_test,
     CLK => Mon_horloge_de_test
     );
 

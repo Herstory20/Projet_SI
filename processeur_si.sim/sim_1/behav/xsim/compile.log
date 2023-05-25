@@ -230,3 +230,377 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/proce
 INFO: [VRFC 10-307] analyzing entity MI
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/BR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BR
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/BR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BR
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+ERROR: [VRFC 10-91] qb is not declared [/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd:159]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd:43]
+INFO: [VRFC 10-240] VHDL file /home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+ERROR: [VRFC 10-91] rst_reg is not declared [/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd:288]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd:44]
+INFO: [VRFC 10-240] VHDL file /home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sim_1/new/Test_AFC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_AFC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/PipeLine.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PipeLine
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity processor
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bzhong/Bureau/processeur_si/processeur_si.srcs/sources_1/new/MI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MI
