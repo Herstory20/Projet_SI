@@ -153,6 +153,15 @@ architecture Behavioral of processor is
     signal Input_data : STD_LOGIC_VECTOR (7 downto 0);
     signal Output_data : STD_LOGIC_VECTOR (7 downto 0);
     
+    signal read_lidi : std_logic;
+    signal write_diex : std_logic;
+    signal alea_diex : std_logic;
+    signal alea_cpt : std_logic_vector (2 downto 0) := b"000";
+    signal A_li_alea :std_logic_vector(7 downto 0) ;
+    signal B_li_alea :std_logic_vector(7 downto 0) ;
+    signal C_li_alea :std_logic_vector(7 downto 0) ;
+    signal OP_li_alea :std_logic_vector(7 downto 0) ;
+    
     signal IP : STD_LOGIC_VECTOR (7 downto 0) := x"00";
     
   
@@ -166,10 +175,21 @@ begin
    begin 
        wait until CLK'event and CLK='1';
        if RST = '0' then
-        IP <= IP + x"1";
+            if alea_diex = '0' and alea_cpt = b"000" then
+                IP <= IP + x"1";
+            else
+                 alea_cpt <= alea_cpt + b"001";
+                 if alea_cpt = b"011" then 
+                    alea_cpt <= b"000";
+                end if;
+            end if;
        end if; 
    end process;
    
+   
+   alea_diex <= '1' When read_lidi = '1' and write_diex = '1' and ( B_li = A_di or C_li = A_di )
+            else '0';
+           
    
    mem_ins : MI PORT MAP (
        addr => IP,
@@ -179,12 +199,21 @@ begin
        Sort(15 downto 8) => B_li,
        Sort(7 downto 0) => C_li
        );
+       
+   A_li_alea <= x"00" when alea_cpt /= b"000" else A_li;
+   B_li_alea <= x"00" when alea_cpt /= b"000" else B_li;
+   C_li_alea <= x"00" when alea_cpt /= b"000" else C_li;
+   OP_li_alea <= x"00" when alea_cpt /= b"000" else OP_li;
 
     piplidi: PipeLine PORT MAP (
-       A_in => A_li,
-       B_in  => B_li,
-       C_in  => C_li,
-       OP_in  => OP_li,
+       A_in => A_li_alea,
+       B_in  => B_li_alea,
+       C_in  => C_li_alea,
+       OP_in  => OP_li_alea,
+       --A_in => A_li,
+       --B_in  => B_li,
+       --C_in  => C_li,
+       --OP_in  => OP_li,
        A_out  => A_di,
        B_out => Addr_Areg,
        C_out => Addr_Breg,
@@ -192,6 +221,11 @@ begin
        CLK => CLK,
        RST=> RST
     );
+    
+    read_lidi <= '0' When OP_li = x"06" else
+                '0' When Op_li = x"07" else
+                '0' When Op_li = x"00" else
+                '1';
     
     --Multiplexeur DI
     Mux_di <= QA_reg WHEN OP_di = x"01" Else
@@ -215,7 +249,11 @@ begin
        RST=> RST
     );
     
+    write_diex <= '0' When Op_di = x"08" else
+                    '0' When Op_di = x"00" else
+                   '1';
                     
+             
     Ctrl_Alu <= b"001" when OP_ex = x"01"
                     else b"010" when OP_ex = x"02"
                     else b"011" when OP_ex = x"03" 
