@@ -176,7 +176,7 @@ architecture Behavioral of processor is
     
     signal IP : STD_LOGIC_VECTOR (7 downto 0) := x"00";
     
-   --JMP 09
+   --JMP 10
   signal inst_jmp : std_logic ;
     
 begin
@@ -241,7 +241,7 @@ begin
        Sort(7 downto 0) => C_li
        );
        
-   inst_jmp <= '1' when OP_li = x"09" else '0';       
+   inst_jmp <= '1' when OP_li = x"10" else '0';       
    
     A_li_alea <= x"00" when  gestion_alea_diex = '1' or fin_alea_diex = '1' else A_li;  
     B_li_alea <= x"00" when  gestion_alea_diex= '1' or fin_alea_diex = '1' else B_li;
@@ -271,7 +271,7 @@ begin
     read_lidi <= '0' When OP_li_alea = x"06" else
                 '0' When Op_li_alea = x"07" else
                 '0' When Op_li_alea = x"00" else
-                '0' When Op_li_alea = x"09" else
+                '0' When Op_li_alea = x"10" else
                 '1';
     
     --Multiplexeur DI
@@ -303,7 +303,7 @@ begin
     
     write_diex <= '0' When Op_di = x"08" else
                     '0' When Op_di = x"00" else
-                    '0' When Op_di = x"09" else 
+                    '0' When Op_di = x"10" else 
                    '1';
                     
              
