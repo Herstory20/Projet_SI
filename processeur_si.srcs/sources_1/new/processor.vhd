@@ -176,8 +176,12 @@ architecture Behavioral of processor is
     
     signal IP : STD_LOGIC_VECTOR (7 downto 0) := x"00";
     
-   --JMP 10
+   --jmp 10
+   --jmpf 0f
+   --inf 09
+   --sup 0a
   signal inst_jmp : std_logic ;
+  signal inst_jmpf : std_logic ;
     
 begin
 
@@ -212,10 +216,11 @@ begin
                 end if;
                 
             else 
-                if inst_jmp = '0' then
-                    IP <= IP + x"1";
+                if inst_jmp = '1' or inst_jmpf = '1' then
+                     IP <= A_li;
                else
-                   IP <= A_li;
+                    IP <= IP + x"1";
+                        
                end if;
                     
             end if;
@@ -249,7 +254,6 @@ begin
     OP_li_alea <= x"00" when gestion_alea_diex = '1' or fin_alea_diex = '1' else OP_li;
    
 
-
     piplidi: PipeLine PORT MAP (
        A_in => A_li_alea,
        B_in  => B_li_alea,
@@ -271,7 +275,7 @@ begin
     read_lidi <= '0' When OP_li_alea = x"06" else
                 '0' When Op_li_alea = x"07" else
                 '0' When Op_li_alea = x"00" else
-                '0' When Op_li_alea = x"10" else
+                '0' When Op_li_alea = x"10" else --jump sans condition
                 '1';
     
     --Multiplexeur DI
@@ -279,14 +283,16 @@ begin
         QA_reg WHEN OP_di = x"02" Else
         QA_reg WHEN OP_di = x"03" Else
         QA_reg WHEN OP_di = x"05" Else
-        QA_reg WHEN OP_di = x"08" 
-        Else Addr_Areg;
+        QA_reg WHEN OP_di = x"08" ELse 
+        QA_reg WHEN OP_di = x"09" Else
+        Addr_Areg;
         
      A_di_alea <= x"00" when gestion_alea_di = '1' or gestion_alea_diex = '1' else A_di;
      B_di_alea <= x"00" when gestion_alea_di = '1' or gestion_alea_diex = '1' else Mux_di;
      C_di_alea <= x"00" when gestion_alea_di = '1'or gestion_alea_diex = '1' else QB_reg;
      OP_di_alea <= x"00" when gestion_alea_di = '1' or gestion_alea_diex = '1' else OP_di;
     
+    inst_jmpf <= '1' when Op_di = x"0f" and QA_reg = x"01" else '0';-- jump avec condition
     
     pipdiex: PipeLine PORT MAP (
        A_in => A_di_alea,
@@ -302,14 +308,16 @@ begin
     );
     
     write_diex <= '0' When Op_di = x"08" else
-                    '0' When Op_di = x"00" else
-                    '0' When Op_di = x"10" else 
-                   '1';
+                  '0' When Op_di = x"00" else
+                  '0' When Op_di = x"10" else 
+                  '0' When Op_di = x"0F" else 
+                  '1';
                     
              
     Ctrl_Alu <= b"001" when OP_ex = x"01"
                     else b"010" when OP_ex = x"02"
                     else b"011" when OP_ex = x"03" 
+                    else b"011" when OP_ex = x"09"
                     else b"000";
                   
      ual : ALU PORT MAP(
@@ -323,15 +331,19 @@ begin
               Ctrl_Alu => Ctrl_Alu
            );
            
+    
     write_exmem <= '1' When Op_ex = x"01" else
                    '1' When Op_ex = x"02" else
                    '1' When Op_ex = x"03" else
+                   '1' When Op_ex = x"09" else
                    '0';
            
     Mux_ex <= S_alu when OP_ex = x"01"
-                       or OP_ex = x"02" 
-                      or OP_ex = x"03" 
-                       else A_alu;
+                      or OP_ex = x"02" 
+                      or OP_ex = x"03" else
+                      x"00" when OP_ex = x"09" and N_alu = '1' else -- inf avec la première valeur inférieur
+                      x"01" when OP_ex = x"09" and N_alu = '0' else -- inf avec la première valeur supérieure
+                      A_alu;
        
     pipexmem: PipeLine PORT MAP (
        A_in => A_ex,
@@ -346,6 +358,7 @@ begin
        RST=> RST
     );
     
+    -- 0 écriture et 1 lecture
     Rw_data <=  '0' when OP_mem = x"08"
             else '1';
     
@@ -362,8 +375,8 @@ begin
        Sort => Output_data
     );
     
-    Mux_mem <= Output_data when OP_mem = x"07" 
-                else B_mem;
+    Mux_mem <= Output_data when OP_mem = x"07" else
+               B_mem;
     
     pipmemre: PipeLine PORT MAP (
        A_in => A_mem,
@@ -378,9 +391,10 @@ begin
        RST=> RST
     );
     
+    -- 0 lecture et 1 écriture
     W_reg <= '0' when OP_re = x"08" 
             else '0' when OP_re = x"00" 
-             else '1';
+            else '1';
     
     banc_registre : BR PORT MAP(
        AddrA =>  Addr_Areg,

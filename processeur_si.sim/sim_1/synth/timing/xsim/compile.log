@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.sim/sim_1/synth/timing/xsim/Test_AFC_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module BR
+INFO: [VRFC 10-311] analyzing module MI
+INFO: [VRFC 10-311] analyzing module PipeLine
+INFO: [VRFC 10-311] analyzing module PipeLine_0
+INFO: [VRFC 10-311] analyzing module PipeLine_1
+INFO: [VRFC 10-311] analyzing module PipeLine_2
+INFO: [VRFC 10-311] analyzing module processor
+INFO: [VRFC 10-311] analyzing module glbl

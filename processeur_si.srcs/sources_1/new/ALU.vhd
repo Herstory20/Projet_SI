@@ -62,7 +62,7 @@ begin
             when others => Aux <= x"00" ;
         end case;
         Aux <= Temp_res(7 downto 0);
-        if Aux < x"00000000" then N<= '1'; else N<='0'; end if; -- N= négatif
+        if Temp_res(7) = '1'  then N <= '1'; else N <='0'; end if; -- N= négatif
         if Temp_res(15 downto 8)>0 then O<= '1'; else O<='0'; end if;  -- Overflow
         if Aux = x"00000000" then Z <='1'; else Z<='0'; end if; -- sortie nulle
         if Temp_res(8)='1' then C <= '1'; else C<='0'; end if; -- retenue

@@ -95,8 +95,13 @@ process
     wait for 100 ns;
 
     Ctrl_Alu<=b"011"; --soustraction 
-    A<=b"11111111";
-    B<=b"00000010";
+    A<=x"02";
+    B<=x"04";
+    wait for 100 ns;
+    
+    Ctrl_Alu<=b"011"; --soustraction 
+    A<=x"06";
+    B<=x"03";
     wait for 100 ns;
     
 end process;
