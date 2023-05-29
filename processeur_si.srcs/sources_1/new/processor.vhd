@@ -158,22 +158,26 @@ architecture Behavioral of processor is
     signal write_diex : std_logic;
     signal alea_di : std_logic;
     signal alea_cpt_di : std_logic_vector (2 downto 0) := b"000";
-    signal A_di_alea :std_logic_vector(7 downto 0) ;
-    signal B_di_alea :std_logic_vector(7 downto 0) ;
-    signal C_di_alea :std_logic_vector(7 downto 0) ;
-    signal OP_di_alea :std_logic_vector(7 downto 0) ;
+    signal A_li_alea :std_logic_vector(7 downto 0) ;
+    signal B_li_alea :std_logic_vector(7 downto 0) ;
+    signal C_li_alea :std_logic_vector(7 downto 0) ;
+    signal OP_li_alea :std_logic_vector(7 downto 0) ;
+    signal gestion_alea_di : std_logic;
     
     signal write_exmem : std_logic;
     signal alea_diex : std_logic;
     signal alea_cpt_diex : std_logic_vector (2 downto 0) := b"000";
-    signal A_diex_alea :std_logic_vector(7 downto 0) ;
-    signal B_diex_alea :std_logic_vector(7 downto 0) ;
-    signal C_diex_alea :std_logic_vector(7 downto 0) ;
-    signal OP_diex_alea :std_logic_vector(7 downto 0) ;
+    signal A_di_alea :std_logic_vector(7 downto 0) ;
+    signal B_di_alea :std_logic_vector(7 downto 0) ;
+    signal C_di_alea :std_logic_vector(7 downto 0) ;
+    signal OP_di_alea :std_logic_vector(7 downto 0) ;
+    signal gestion_alea_diex : std_logic;
+    signal fin_alea_diex : std_logic;
     
     signal IP : STD_LOGIC_VECTOR (7 downto 0) := x"00";
     
-  
+   --JMP 09
+  signal inst_jmp : std_logic ;
     
 begin
 
@@ -185,23 +189,35 @@ begin
    begin 
        wait until CLK'event and CLK='1';
        if RST = '0' then
-
+            fin_alea_diex <= '0';
             -- Alea entre les deux premiers pipelines
-            if alea_di = '1' or alea_cpt_di /= b"000" then
+            if alea_di = '1' or gestion_alea_di= '1' then
+                 gestion_alea_di <= '1';
                  alea_cpt_di <= alea_cpt_di + b"001";
                  if alea_cpt_di = b"010" then 
+                    gestion_alea_di <= '0';
                     alea_cpt_di <= b"000";
                     IP <= IP - x"01";
                 end if;
+                
             --Deuxième aléa entre le premier et le troisième paipeline
-            elsif alea_diex = '1' or alea_cpt_diex /= b"000" then
-                 alea_cpt_diex <= alea_cpt_diex + b"001";
-                 if alea_cpt_diex = b"01" then 
+            elsif alea_diex = '1' or gestion_alea_diex= '1' then
+                 gestion_alea_diex <= '1' ;
+                 alea_cpt_diex <= alea_cpt_diex + b"001"; 
+                 if alea_cpt_diex = b"1" then 
+                    gestion_alea_diex <= '0' ; 
                     alea_cpt_diex <= b"000";
                     IP <= IP - x"01";
+                    fin_alea_diex <= '1';
                 end if;
+                
             else 
-                IP <= IP + x"1";
+                if inst_jmp = '0' then
+                    IP <= IP + x"1";
+               else
+                   IP <= A_li;
+               end if;
+                    
             end if;
                 
         end if;
@@ -225,13 +241,20 @@ begin
        Sort(7 downto 0) => C_li
        );
        
-  
+   inst_jmp <= '1' when OP_li = x"09" else '0';       
+   
+    A_li_alea <= x"00" when  gestion_alea_diex = '1' or fin_alea_diex = '1' else A_li;  
+    B_li_alea <= x"00" when  gestion_alea_diex= '1' or fin_alea_diex = '1' else B_li;
+    C_li_alea <= x"00" when  gestion_alea_diex = '1' or fin_alea_diex = '1' else C_li;
+    OP_li_alea <= x"00" when gestion_alea_diex = '1' or fin_alea_diex = '1' else OP_li;
+   
+
 
     piplidi: PipeLine PORT MAP (
-       A_in => A_li,
-       B_in  => B_li,
-       C_in  => C_li,
-       OP_in  => OP_li,
+       A_in => A_li_alea,
+       B_in  => B_li_alea,
+       C_in  => C_li_alea,
+       OP_in  => OP_li_alea,
        --A_in => A_li,
        --B_in  => B_li,
        --C_in  => C_li,
@@ -244,9 +267,11 @@ begin
        RST=> RST
     );
     
-    read_lidi <= '0' When OP_li = x"06" else
-                '0' When Op_li = x"07" else
-                '0' When Op_li = x"00" else
+    
+    read_lidi <= '0' When OP_li_alea = x"06" else
+                '0' When Op_li_alea = x"07" else
+                '0' When Op_li_alea = x"00" else
+                '0' When Op_li_alea = x"09" else
                 '1';
     
     --Multiplexeur DI
@@ -257,10 +282,10 @@ begin
         QA_reg WHEN OP_di = x"08" 
         Else Addr_Areg;
         
-     A_di_alea <= x"00" when alea_cpt_di /= b"000" or alea_cpt_diex /= b"000" else A_di;
-     B_di_alea <= x"00" when alea_cpt_di /= b"000" or alea_cpt_diex /= b"000" else Mux_di;
-     C_di_alea <= x"00" when alea_cpt_di /= b"000" or alea_cpt_diex /= b"000" else QB_reg;
-     OP_di_alea <= x"00" when alea_cpt_di /= b"000" or alea_cpt_diex /= b"000" else OP_di;
+     A_di_alea <= x"00" when gestion_alea_di = '1' or gestion_alea_diex = '1' else A_di;
+     B_di_alea <= x"00" when gestion_alea_di = '1' or gestion_alea_diex = '1' else Mux_di;
+     C_di_alea <= x"00" when gestion_alea_di = '1'or gestion_alea_diex = '1' else QB_reg;
+     OP_di_alea <= x"00" when gestion_alea_di = '1' or gestion_alea_diex = '1' else OP_di;
     
     
     pipdiex: PipeLine PORT MAP (
@@ -278,6 +303,7 @@ begin
     
     write_diex <= '0' When Op_di = x"08" else
                     '0' When Op_di = x"00" else
+                    '0' When Op_di = x"09" else 
                    '1';
                     
              

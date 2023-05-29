@@ -1,4 +1,4 @@
-Running: xsim.dir/Test_AFC_behav/xsimk -simmode gui -wdb Test_AFC_behav.wdb -simrunnum 0 -socket 40347
+Running: xsim.dir/Test_AFC_behav/xsimk -simmode gui -wdb Test_AFC_behav.wdb -simrunnum 0 -socket 41659
 Design successfully loaded
-Design Loading Memory Usage: 32752 KB (Peak: 32752 KB)
-Design Loading CPU Usage: 30 ms
+Design Loading Memory Usage: 32756 KB (Peak: 32756 KB)
+Design Loading CPU Usage: 20 ms

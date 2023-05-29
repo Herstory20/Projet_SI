@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.sim/sim_1/behav/xsim/xsim.dir/Test_AFC_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Mon May 29 11:07:48 2023" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Mon May 29 12:44:29 2023" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2258646" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "LIN64" -context "software_version_and_target_device"
@@ -14,11 +14,11 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "63176192-178c-4a44-b3bc-ad7467bc4dec" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "ea89b971ef374288afa1cec0899549b2" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "477" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "530" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Ubuntu" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "Ubuntu 20.04.6 LTS" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz" -context "user_environment"
-webtalk_add_data -client project -key cpu_speed -value "800.000 MHz" -context "user_environment"
+webtalk_add_data -client project -key cpu_speed -value "1782.919 MHz" -context "user_environment"
 webtalk_add_data -client project -key total_processors -value "2" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "134.000 GB" -context "user_environment"
 webtalk_register_client -client xsim
@@ -33,10 +33,10 @@ webtalk_add_data -client xsim -key Debug -value "typical" -context "xsim\\comman
 webtalk_add_data -client xsim -key Simulation_Image_Code -value "56 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Simulation_Image_Data -value "5 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Total_Processes -value "32" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Total_Processes -value "37" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "17" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "1.47_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "245680_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 305706669 -regid "" -xml /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.sim/sim_1/behav/xsim/xsim.dir/Test_AFC_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.sim/sim_1/behav/xsim/xsim.dir/Test_AFC_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.sim/sim_1/behav/xsim/xsim.dir/Test_AFC_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "1.48_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "245700_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3844080022 -regid "" -xml /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.sim/sim_1/behav/xsim/xsim.dir/Test_AFC_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.sim/sim_1/behav/xsim/xsim.dir/Test_AFC_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.sim/sim_1/behav/xsim/xsim.dir/Test_AFC_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
