@@ -157,10 +157,10 @@ architecture Behavioral of processor is
     signal write_diex : std_logic;
     signal alea_diex : std_logic;
     signal alea_cpt : std_logic_vector (2 downto 0) := b"000";
-    signal A_li_alea :std_logic_vector(7 downto 0) ;
-    signal B_li_alea :std_logic_vector(7 downto 0) ;
-    signal C_li_alea :std_logic_vector(7 downto 0) ;
-    signal OP_li_alea :std_logic_vector(7 downto 0) ;
+    signal A_di_alea :std_logic_vector(7 downto 0) ;
+    signal B_di_alea :std_logic_vector(7 downto 0) ;
+    signal C_di_alea :std_logic_vector(7 downto 0) ;
+    signal OP_di_alea :std_logic_vector(7 downto 0) ;
     
     signal IP : STD_LOGIC_VECTOR (7 downto 0) := x"00";
     
@@ -179,8 +179,9 @@ begin
                 IP <= IP + x"1";
             else
                  alea_cpt <= alea_cpt + b"001";
-                 if alea_cpt = b"011" then 
+                 if alea_cpt = b"010" then 
                     alea_cpt <= b"000";
+                    IP <= IP - x"01";
                 end if;
             end if;
        end if; 
@@ -200,16 +201,16 @@ begin
        Sort(7 downto 0) => C_li
        );
        
-   A_li_alea <= x"00" when alea_cpt /= b"000" else A_li;
-   B_li_alea <= x"00" when alea_cpt /= b"000" else B_li;
-   C_li_alea <= x"00" when alea_cpt /= b"000" else C_li;
-   OP_li_alea <= x"00" when alea_cpt /= b"000" else OP_li;
+   A_di_alea <= x"00" when alea_cpt /= b"000" else A_di;
+   B_di_alea <= x"00" when alea_cpt /= b"000" else Mux_di;
+   C_di_alea <= x"00" when alea_cpt /= b"000" else QB_reg;
+   OP_di_alea <= x"00" when alea_cpt /= b"000" else OP_di;
 
     piplidi: PipeLine PORT MAP (
-       A_in => A_li_alea,
-       B_in  => B_li_alea,
-       C_in  => C_li_alea,
-       OP_in  => OP_li_alea,
+       A_in => A_li,
+       B_in  => B_li,
+       C_in  => C_li,
+       OP_in  => OP_li,
        --A_in => A_li,
        --B_in  => B_li,
        --C_in  => C_li,
@@ -237,10 +238,10 @@ begin
     
     
     pipdiex: PipeLine PORT MAP (
-       A_in => A_di,
-       B_in  => Mux_di,
-       C_in  => QB_reg,
-       OP_in  => OP_di,
+       A_in => A_di_alea,
+       B_in  => B_di_alea,
+       C_in  => C_di_alea,
+       OP_in  => OP_di_alea,
        A_out  => A_ex,
        B_out  => A_alu,
        C_out  => B_alu,
