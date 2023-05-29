@@ -154,19 +154,29 @@ architecture Behavioral of processor is
     signal Output_data : STD_LOGIC_VECTOR (7 downto 0);
     
     signal read_lidi : std_logic;
+    
     signal write_diex : std_logic;
-    signal alea_diex : std_logic;
-    signal alea_cpt : std_logic_vector (2 downto 0) := b"000";
+    signal alea_di : std_logic;
+    signal alea_cpt_di : std_logic_vector (2 downto 0) := b"000";
     signal A_di_alea :std_logic_vector(7 downto 0) ;
     signal B_di_alea :std_logic_vector(7 downto 0) ;
     signal C_di_alea :std_logic_vector(7 downto 0) ;
     signal OP_di_alea :std_logic_vector(7 downto 0) ;
+    
+    signal write_exmem : std_logic;
+    signal alea_diex : std_logic;
+    signal alea_cpt_diex : std_logic_vector (2 downto 0) := b"000";
+    signal A_diex_alea :std_logic_vector(7 downto 0) ;
+    signal B_diex_alea :std_logic_vector(7 downto 0) ;
+    signal C_diex_alea :std_logic_vector(7 downto 0) ;
+    signal OP_diex_alea :std_logic_vector(7 downto 0) ;
     
     signal IP : STD_LOGIC_VECTOR (7 downto 0) := x"00";
     
   
     
 begin
+
 
    Qa <= QA_reg;
    Qb <= QB_reg;
@@ -175,20 +185,34 @@ begin
    begin 
        wait until CLK'event and CLK='1';
        if RST = '0' then
-            if alea_diex = '0' and alea_cpt = b"000" then
-                IP <= IP + x"1";
-            else
-                 alea_cpt <= alea_cpt + b"001";
-                 if alea_cpt = b"010" then 
-                    alea_cpt <= b"000";
+
+            -- Alea entre les deux premiers pipelines
+            if alea_di = '1' or alea_cpt_di /= b"000" then
+                 alea_cpt_di <= alea_cpt_di + b"001";
+                 if alea_cpt_di = b"010" then 
+                    alea_cpt_di <= b"000";
                     IP <= IP - x"01";
                 end if;
+            --Deuxième aléa entre le premier et le troisième paipeline
+            elsif alea_diex = '1' or alea_cpt_diex /= b"000" then
+                 alea_cpt_diex <= alea_cpt_diex + b"001";
+                 if alea_cpt_diex = b"01" then 
+                    alea_cpt_diex <= b"000";
+                    IP <= IP - x"01";
+                end if;
+            else 
+                IP <= IP + x"1";
             end if;
-       end if; 
+                
+        end if;
+      
    end process;
    
    
-   alea_diex <= '1' When read_lidi = '1' and write_diex = '1' and ( B_li = A_di or C_li = A_di )
+   alea_di <= '1' When read_lidi = '1' and write_diex = '1' and ( B_li = A_di or C_li = A_di )
+            else '0';
+            
+   alea_diex <= '1' When read_lidi = '1' and write_exmem = '1' and ( B_li = A_ex or C_li = A_ex )
             else '0';
            
    
@@ -201,10 +225,7 @@ begin
        Sort(7 downto 0) => C_li
        );
        
-   A_di_alea <= x"00" when alea_cpt /= b"000" else A_di;
-   B_di_alea <= x"00" when alea_cpt /= b"000" else Mux_di;
-   C_di_alea <= x"00" when alea_cpt /= b"000" else QB_reg;
-   OP_di_alea <= x"00" when alea_cpt /= b"000" else OP_di;
+  
 
     piplidi: PipeLine PORT MAP (
        A_in => A_li,
@@ -235,6 +256,11 @@ begin
         QA_reg WHEN OP_di = x"05" Else
         QA_reg WHEN OP_di = x"08" 
         Else Addr_Areg;
+        
+     A_di_alea <= x"00" when alea_cpt_di /= b"000" or alea_cpt_diex /= b"000" else A_di;
+     B_di_alea <= x"00" when alea_cpt_di /= b"000" or alea_cpt_diex /= b"000" else Mux_di;
+     C_di_alea <= x"00" when alea_cpt_di /= b"000" or alea_cpt_diex /= b"000" else QB_reg;
+     OP_di_alea <= x"00" when alea_cpt_di /= b"000" or alea_cpt_diex /= b"000" else OP_di;
     
     
     pipdiex: PipeLine PORT MAP (
@@ -270,6 +296,11 @@ begin
               C => C_alu,
               Ctrl_Alu => Ctrl_Alu
            );
+           
+    write_exmem <= '1' When Op_ex = x"01" else
+                   '1' When Op_ex = x"02" else
+                   '1' When Op_ex = x"03" else
+                   '0';
            
     Mux_ex <= S_alu when OP_ex = x"01"
                        or OP_ex = x"02" 
