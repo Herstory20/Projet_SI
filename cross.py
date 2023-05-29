@@ -71,7 +71,7 @@ def cross(asm_code):
             cross_line = f"load 1 {parts[2]}"
             cross_code.append(cross_line)
 
-            cross_line = f"subi 0 0 1"
+            cross_line = f"inf 0 0 1"
             cross_code.append(cross_line)
 
         if parts[0] == 'SUP':
@@ -82,7 +82,7 @@ def cross(asm_code):
             cross_line = f"load 1 {parts[2]}"
             cross_code.append(cross_line)
 
-            cross_line = f"subs 0 0 1"
+            cross_line = f"sup 0 0 1"
             cross_code.append(cross_line)
 
         if parts[0] == 'INFE':
@@ -93,7 +93,7 @@ def cross(asm_code):
             cross_line = f"load 1 {parts[2]}"
             cross_code.append(cross_line)
 
-            cross_line = f"subie 0 0 1"
+            cross_line = f"infe 0 0 1"
             cross_code.append(cross_line)
 
         if parts[0] == 'SUPE':
@@ -104,7 +104,7 @@ def cross(asm_code):
             cross_line = f"load 1 {parts[2]}"
             cross_code.append(cross_line)
 
-            cross_line = f"subse 0 0 1"
+            cross_line = f"supe 0 0 1"
             cross_code.append(cross_line)
 
         if parts[0] == 'NEQ':
@@ -115,7 +115,7 @@ def cross(asm_code):
             cross_line = f"load 1 {parts[2]}"
             cross_code.append(cross_line)
 
-            cross_line = f"subne 0 0 1"
+            cross_line = f"neq 0 0 1"
             cross_code.append(cross_line)
 
         if parts[0] == 'EQU':
@@ -126,7 +126,7 @@ def cross(asm_code):
             cross_line = f"load 1 {parts[2]}"
             cross_code.append(cross_line)
 
-            cross_line = f"sube 0 0 1"
+            cross_line = f"equ 0 0 1"
             cross_code.append(cross_line)
 
         if parts[0] == 'JMPF':
@@ -193,12 +193,12 @@ def hex(cross):
      "afc": "06" ,
      "load": "07" ,
      "store": "08" ,
-     "subi": "09" ,
-     "subs": "0A" ,
-     "subie": "0B" ,
-     "subse": "0C" ,
-     "subne": "0D" ,
-     "sube": "0E" ,
+     "inf": "09" ,
+     "sup": "0A" ,
+     "infe": "0B" ,
+     "supe": "0C" ,
+     "neq": "0D" ,
+     "equ": "0E" ,
      "jumpf": "0F" ,
      "jump": "10" 
 }
