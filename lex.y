@@ -25,14 +25,17 @@
 
 %%
 
-Funs :
+Prog : Funs
+  ;
+
+Funs : 
     Fun 
   | Funs Fun 
   ;
 
 Fun :
-    tINT tID tLPAR Arguments tRPAR Fun_Body
-    tVOID tID tLPAR Arguments tRPAR Body
+    tINT tID tLPAR Arguments tRPAR Fun_Body 
+  | tVOID tID tLPAR Arguments tRPAR Body 
   ;
 
 Fun_Body :
@@ -40,7 +43,7 @@ Fun_Body :
   ;
 
 Arguments :
-    tVOID
+    tVOID 
   | Params
   ;
 
@@ -75,16 +78,18 @@ If :
 
 X : %empty  { Insert_instruction("JMPF",ts_last(),-1,-1); push(GetNB_Instruc()); } ;
 
-Y : %empty {Modif_ins_list(pop());Insert_instruction("JMP",-1,-1,-1); 
-printf("****---------**** %d\n", GetNB_Instruc()); push(GetNB_Instruc());}
+Y : %empty {Insert_instruction("JMP",-1,-1,-1);Modif_ins_list(pop()); push(GetNB_Instruc());}
 
 Else :
     tELSE Body 
   ;
   
 While :
-    tWHILE tLPAR Inverse_Cond tRPAR Body 
+    tWHILE tLPAR Inverse_Cond tRPAR U Body {Insert_instruction("JMP",pop(),-1,-1);
+    Modif_ins_list(pop());}
   ;
+
+U : %empty  { Insert_instruction("JMPF",ts_last(),-1,-1); push(GetNB_Instruc());push(GetNB_Instruc()); } ;
 
 Print :
     tPRINT tLPAR exp tRPAR tSEMI  { Insert_instruction("PRI",ts_last(),-1,-1); Delete_Last();}
@@ -118,7 +123,7 @@ Declaration :
   ;
 
 Return :
-    tRETURN Expression tSEMI 
+    tRETURN Expression tSEMI
   ;
 
 

@@ -181,7 +181,7 @@ void Insert_instruction (char ins1[5],int ins2,int ins3,int ins4){
     Concat(ins,ins1,ins2,ins3,ins4);
     if (ins_list->first == NULL){
         ins_list->first = malloc(sizeof(instruction));
-        strcpy(ins_list->first->ins,ins);
+        strcpy(ins_list->first->ins, ins);
         ins_list->last = ins_list->first;
     }
     else {
@@ -212,8 +212,8 @@ void Concat (char * ins,char ins1[5],int ins2,int ins3,int ins4){
 
 void print_list(){
     instruction * aux = ins_list->first;
-    int i = 0;
-    while (aux != NULL){
+    int i = 1;
+    while ((aux != NULL) && (i<=GetNB_Instruc())){
         printf("%d ------------%s\n",i, aux->ins);
         i++;
         aux = aux->suiv;
