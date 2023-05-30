@@ -180,6 +180,10 @@ architecture Behavioral of processor is
    --jmpf 0f
    --inf 09
    --sup 0a
+   --infe 0b
+   --supe 0c
+   --neq 0d
+   --equ 0e
   signal inst_jmp : std_logic ;
   signal inst_jmpf : std_logic ;
     
@@ -285,6 +289,11 @@ begin
         QA_reg WHEN OP_di = x"05" Else
         QA_reg WHEN OP_di = x"08" ELse 
         QA_reg WHEN OP_di = x"09" Else
+        QA_reg WHEN OP_di = x"0a" Else
+        QA_reg WHEN OP_di = x"0b" Else
+        QA_reg WHEN OP_di = x"0c" Else
+        QA_reg WHEN OP_di = x"0d" Else
+        QA_reg WHEN OP_di = x"0e" Else
         Addr_Areg;
         
      A_di_alea <= x"00" when gestion_alea_di = '1' or gestion_alea_diex = '1' else A_di;
@@ -318,6 +327,11 @@ begin
                     else b"010" when OP_ex = x"02"
                     else b"011" when OP_ex = x"03" 
                     else b"011" when OP_ex = x"09"
+                    else b"011" when OP_ex = x"0a"
+                    else b"011" when OP_ex = x"0b"
+                    else b"011" when OP_ex = x"0c"
+                    else b"011" when OP_ex = x"0d"
+                    else b"011" when OP_ex = x"0e"
                     else b"000";
                   
      ual : ALU PORT MAP(
@@ -336,13 +350,28 @@ begin
                    '1' When Op_ex = x"02" else
                    '1' When Op_ex = x"03" else
                    '1' When Op_ex = x"09" else
+                   '1' When Op_ex = x"0a" else
+                   '1' When Op_ex = x"0b" else
+                   '1' When Op_ex = x"0c" else
+                   '1' When Op_ex = x"0d" else
+                   '1' When Op_ex = x"0e" else
                    '0';
            
     Mux_ex <= S_alu when OP_ex = x"01"
                       or OP_ex = x"02" 
                       or OP_ex = x"03" else
                       x"00" when OP_ex = x"09" and N_alu = '1' else -- inf avec la première valeur inférieur
-                      x"01" when OP_ex = x"09" and N_alu = '0' else -- inf avec la première valeur supérieure
+                      x"01" when OP_ex = x"09" and (N_alu = '0' or Z_alu = '1') else -- inf avec la première valeur supérieure
+                      x"01" when OP_ex = x"0a" and (N_alu = '1' or Z_alu = '1') else -- sup avec la première valeur inférieur
+                      x"00" when OP_ex = x"0a" and N_alu = '0' else -- sup avec la première valeur supérieure
+                      x"00" when OP_ex = x"0b" and (N_alu = '1' or Z_alu = '1' ) else -- infe avec la première valeur inférieur ou égale
+                      x"01" when OP_ex = x"0b" and N_alu = '0' else -- infe avec la première valeur supérieure
+                      x"01" when OP_ex = x"0c" and N_alu = '1' else -- supe avec la première valeur inférieur
+                      x"00" when OP_ex = x"0c" and (N_alu = '0' or Z_alu = '1' ) else -- supe avec la première valeur supérieure ou égale
+                      x"01" when OP_ex = x"0d" and Z_alu = '1' else --neq cas égalité
+                      x"00" when OP_ex = x"0d" and Z_alu = '0' else --neq cas inégalité
+                      x"00" when OP_ex = x"0e" and Z_alu = '1' else --equ cas égalité
+                      x"01" when OP_ex = x"0e" and Z_alu = '0' else --equ cas inégalité
                       A_alu;
        
     pipexmem: PipeLine PORT MAP (

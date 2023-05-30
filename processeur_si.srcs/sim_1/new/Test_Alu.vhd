@@ -104,6 +104,11 @@ process
     B<=x"03";
     wait for 100 ns;
     
+    Ctrl_Alu<=b"011"; --soustraction 
+    A<=x"03";
+    B<=x"03";
+    wait for 100 ns;
+    
 end process;
 
 end Behavioral;

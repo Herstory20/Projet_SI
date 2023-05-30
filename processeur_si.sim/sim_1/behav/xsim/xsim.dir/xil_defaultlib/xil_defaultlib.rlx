@@ -3,10 +3,10 @@
 Jun 14 2018
 20:07:38
 /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sim_1/new/Test_AFC.vhd,1685301646,vhdl,,,,test_afc,,,,,,,,
-/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sim_1/new/Test_Alu.vhd,1685400481,vhdl,,,,test_alu,,,,,,,,
-/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/ALU.vhd,1685400343,vhdl,,,,alu,,,,,,,,
+/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sim_1/new/Test_Alu.vhd,1685404489,vhdl,,,,test_alu,,,,,,,,
+/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/ALU.vhd,1685404437,vhdl,,,,alu,,,,,,,,
 /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/BR.vhd,1685301646,vhdl,,,,br,,,,,,,,
 /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MD.vhd,1685301646,vhdl,,,,md,,,,,,,,
-/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MI.vhd,1685402747,vhdl,,,,mi,,,,,,,,
+/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MI.vhd,1685406301,vhdl,,,,mi,,,,,,,,
 /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd,1685301646,vhdl,,,,pipeline,,,,,,,,
-/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd,1685402663,vhdl,,,,processor,,,,,,,,
+/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd,1685406107,vhdl,,,,processor,,,,,,,,
