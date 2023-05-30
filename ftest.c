@@ -5,17 +5,23 @@ int compute(int a, int d) {
     while (!(a == 3)) {
     print(a);
     a= a-1;
+    b=b+c;
     }
     return b;
 }
+
 void main(void) {
   int a;
-  if (!(a == 3)) {
+  int e=5;
+  if (!(a <= 3)) {
     print(a);
   } else {
     int b = compute(a, 2 * a);
     print(b);
   }
-  int e= b;
+  if (b==10){
+    e=b;
+  } 
+  e=0;
 }
 
