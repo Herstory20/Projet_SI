@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -47,6 +48,9 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 read_xdc {{/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/constrs_1/new/processeur_v1.xdc}}
 set_property used_in_implementation false [get_files {{/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/constrs_1/new/processeur_v1.xdc}}]
+
+read_xdc {{/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/constrs_1/new/constraint_processeur.xdc}}
+set_property used_in_implementation false [get_files {{/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/constrs_1/new/constraint_processeur.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

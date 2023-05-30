@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1685392204">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1685442985">
   <File Type="VDS-TIMING-PB" Name="processor_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="processor_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="processor.dcp"/>
@@ -61,8 +61,14 @@
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/constrs_1/new/constraint_processeur.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/processeur_v1.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraint_processeur.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

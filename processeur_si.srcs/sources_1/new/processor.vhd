@@ -252,10 +252,10 @@ begin
        
    inst_jmp <= '1' when OP_li = x"10" else '0';       
    
-    A_li_alea <= x"00" when  gestion_alea_diex = '1' or fin_alea_diex = '1' else A_li;  
-    B_li_alea <= x"00" when  gestion_alea_diex= '1' or fin_alea_diex = '1' else B_li;
-    C_li_alea <= x"00" when  gestion_alea_diex = '1' or fin_alea_diex = '1' else C_li;
-    OP_li_alea <= x"00" when gestion_alea_diex = '1' or fin_alea_diex = '1' else OP_li;
+    A_li_alea <= x"00" when  gestion_alea_di = '1' or gestion_alea_diex = '1' or fin_alea_diex = '1' else A_li;  
+    B_li_alea <= x"00" when  gestion_alea_di = '1' or gestion_alea_diex= '1' or fin_alea_diex = '1' else B_li;
+    C_li_alea <= x"00" when  gestion_alea_di = '1' or gestion_alea_diex = '1' or fin_alea_diex = '1' else C_li;
+    OP_li_alea <= x"00" when gestion_alea_di = '1' or gestion_alea_diex = '1' or fin_alea_diex = '1' else OP_li;
    
 
     piplidi: PipeLine PORT MAP (

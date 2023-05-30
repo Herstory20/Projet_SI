@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon May 29 22:30:06 2023
-# Process ID: 522478
+# Start of session at: Tue May 30 12:36:26 2023
+# Process ID: 131251
 # Current directory: /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.runs/synth_1
 # Command line: vivado -log processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source processor.tcl
 # Log file: /home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.runs/synth_1/processor.vds

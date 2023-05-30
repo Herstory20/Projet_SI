@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Mon May 29 22:40:02 2023
-| Host             : srv-tp04 running 64-bit Ubuntu 20.04.6 LTS
+| Date             : Tue May 30 12:37:48 2023
+| Host             : insa-12605 running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file processor_power_routed.rpt -pb processor_power_summary_routed.pb -rpx processor_power_routed.rpx
 | Design           : processor
 | Device           : xc7a35tcpg236-1
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.076        |
+| Total On-Chip Power (W)  | 0.073        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.006        |
-| Device Static (W)        | 0.070        |
+| Dynamic (W)              | 0.001        |
+| Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
 | Junction Temperature (C) | 25.4         |
@@ -49,20 +49,20 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      363 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      149 |     20800 |            0.72 |
-|   CARRY4       |    <0.001 |       10 |      8150 |            0.12 |
-|   Register     |    <0.001 |      158 |     41600 |            0.38 |
-|   Others       |     0.000 |       17 |       --- |             --- |
-| Signals        |    <0.001 |      293 |       --- |             --- |
-| I/O            |     0.004 |       18 |       106 |           16.98 |
-| Static Power   |     0.070 |          |           |                 |
-| Total          |     0.076 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |    <0.001 |        3 |       --- |             --- |
+| Slice Logic             |    <0.001 |       77 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |       20 |     20800 |            0.10 |
+|   Register              |    <0.001 |       34 |     41600 |            0.08 |
+|   LUT as Shift Register |    <0.001 |        2 |      9600 |            0.02 |
+|   Others                |     0.000 |       10 |       --- |             --- |
+| Signals                 |    <0.001 |       52 |       --- |             --- |
+| I/O                     |    <0.001 |       18 |       106 |           16.98 |
+| Static Power            |     0.072 |          |           |                 |
+| Total                   |     0.073 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -71,11 +71,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.011 |       0.002 |      0.010 |
+| Vccint    |       1.000 |     0.010 |       0.001 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.003 |       0.002 |      0.001 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -140,14 +140,12 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| processor       |     0.006 |
+| processor       |     0.001 |
 |   banc_registre |    <0.001 |
 |   mem_ins       |    <0.001 |
-|   pipdiex       |    <0.001 |
 |   pipexmem      |    <0.001 |
 |   piplidi       |    <0.001 |
 |   pipmemre      |    <0.001 |
-|   ual           |    <0.001 |
 +-----------------+-----------+
 
 

@@ -14,28 +14,27 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 522516 
+INFO: Helper process launched with PID 131260 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1255.273 ; gain = 83.809 ; free physical = 107866 ; free virtual = 137949
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1254.270 ; gain = 82.828 ; free physical = 8504 ; free virtual = 19925
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'processor' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:44]
-INFO: [Synth 8-3491] module 'MI' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MI.vhd:35' bound to instance 'mem_ins' of component 'MI' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:235]
+INFO: [Synth 8-3491] module 'MI' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MI.vhd:35' bound to instance 'mem_ins' of component 'MI' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:244]
 INFO: [Synth 8-638] synthesizing module 'MI' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MI.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'MI' (1#1) [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MI.vhd:41]
-INFO: [Synth 8-3491] module 'PipeLine' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:34' bound to instance 'piplidi' of component 'PipeLine' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:253]
+INFO: [Synth 8-3491] module 'PipeLine' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:34' bound to instance 'piplidi' of component 'PipeLine' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:261]
 INFO: [Synth 8-638] synthesizing module 'PipeLine' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'PipeLine' (2#1) [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:47]
-INFO: [Synth 8-3491] module 'PipeLine' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:34' bound to instance 'pipdiex' of component 'PipeLine' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:291]
-INFO: [Synth 8-3491] module 'ALU' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/ALU.vhd:35' bound to instance 'ual' of component 'ALU' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:315]
+INFO: [Synth 8-3491] module 'PipeLine' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:34' bound to instance 'pipdiex' of component 'PipeLine' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:306]
+INFO: [Synth 8-3491] module 'ALU' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/ALU.vhd:35' bound to instance 'ual' of component 'ALU' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:337]
 INFO: [Synth 8-638] synthesizing module 'ALU' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/ALU.vhd:46]
-WARNING: [Synth 8-614] signal 'Aux' is read in the process but is not in the sensitivity list [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/ALU.vhd:55]
 INFO: [Synth 8-256] done synthesizing module 'ALU' (3#1) [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/ALU.vhd:46]
-INFO: [Synth 8-3491] module 'PipeLine' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:34' bound to instance 'pipexmem' of component 'PipeLine' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:336]
-INFO: [Synth 8-3491] module 'MD' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MD.vhd:34' bound to instance 'mem_data' of component 'MD' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:356]
+INFO: [Synth 8-3491] module 'PipeLine' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:34' bound to instance 'pipexmem' of component 'PipeLine' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:377]
+INFO: [Synth 8-3491] module 'MD' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MD.vhd:34' bound to instance 'mem_data' of component 'MD' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:398]
 INFO: [Synth 8-638] synthesizing module 'MD' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MD.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'MD' (4#1) [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/MD.vhd:43]
-INFO: [Synth 8-3491] module 'PipeLine' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:34' bound to instance 'pipmemre' of component 'PipeLine' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:368]
-INFO: [Synth 8-3491] module 'BR' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/BR.vhd:34' bound to instance 'banc_registre' of component 'BR' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:385]
+INFO: [Synth 8-3491] module 'PipeLine' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:34' bound to instance 'pipmemre' of component 'PipeLine' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:410]
+INFO: [Synth 8-3491] module 'BR' declared at '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/BR.vhd:34' bound to instance 'banc_registre' of component 'BR' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/processor.vhd:428]
 INFO: [Synth 8-638] synthesizing module 'BR' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/BR.vhd:45]
 WARNING: [Synth 8-614] signal 'DATA' is read in the process but is not in the sensitivity list [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/BR.vhd:51]
 INFO: [Synth 8-256] done synthesizing module 'BR' (5#1) [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/BR.vhd:45]
@@ -50,7 +49,7 @@ WARNING: [Synth 8-3331] design BR has unconnected port AddrB[5]
 WARNING: [Synth 8-3331] design BR has unconnected port AddrB[4]
 WARNING: [Synth 8-3331] design PipeLine has unconnected port RST
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1310.898 ; gain = 139.434 ; free physical = 107861 ; free virtual = 137943
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1310.895 ; gain = 139.453 ; free physical = 8503 ; free virtual = 19925
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -63,10 +62,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1310.898 ; gain = 139.434 ; free physical = 107862 ; free virtual = 137943
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1310.895 ; gain = 139.453 ; free physical = 8507 ; free virtual = 19929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1310.898 ; gain = 139.434 ; free physical = 107862 ; free virtual = 137943
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1310.895 ; gain = 139.453 ; free physical = 8507 ; free virtual = 19929
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -75,27 +74,31 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/constrs_1/new/processeur_v1.xdc]
 Finished Parsing XDC File [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/constrs_1/new/processeur_v1.xdc]
+Parsing XDC File [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/constrs_1/new/constraint_processeur.xdc]
+Finished Parsing XDC File [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/constrs_1/new/constraint_processeur.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/constrs_1/new/constraint_processeur.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/processor_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/processor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1670.281 ; gain = 0.000 ; free physical = 107616 ; free virtual = 137698
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1675.230 ; gain = 0.000 ; free physical = 8251 ; free virtual = 19673
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:33 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107703 ; free virtual = 137787
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8336 ; free virtual = 19757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:33 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107703 ; free virtual = 137787
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8336 ; free virtual = 19757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:33 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107705 ; free virtual = 137789
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8336 ; free virtual = 19758
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "Temp_res" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "md_reg[0]" won't be mapped to RAM because it is too sparse
@@ -217,7 +220,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'bancreg_reg[13]' [/home/set
 WARNING: [Synth 8-327] inferring latch for variable 'bancreg_reg[14]' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/BR.vhd:54]
 WARNING: [Synth 8-327] inferring latch for variable 'bancreg_reg[15]' [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/BR.vhd:54]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107696 ; free virtual = 137780
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8325 ; free virtual = 19747
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -235,17 +238,22 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
-	               28 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
 	                8 Bit    Registers := 274   
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	 256 Input     28 Bit        Muxes := 1     
+	   4 Input     26 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 12    
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 278   
+	   2 Input      8 Bit        Muxes := 11    
+	  13 Input      8 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 1     
+	 256 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 277   
 	   4 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -263,15 +271,20 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 12    
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 11    
+	  13 Input      8 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   9 Input      1 Bit        Muxes := 1     
 Module MI 
 Detailed RTL Component Info : 
 +---Registers : 
-	               28 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
 +---Muxes : 
-	 256 Input     28 Bit        Muxes := 1     
+	   4 Input     26 Bit        Muxes := 1     
+	 256 Input      2 Bit        Muxes := 1     
 Module PipeLine 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -314,8 +327,8 @@ Warning: Parallel synthesis criteria is not met
 WARNING: [Synth 8-6014] Unused sequential element pipexmem/C_out_reg was removed.  [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:55]
 WARNING: [Synth 8-6014] Unused sequential element pipmemre/C_out_reg was removed.  [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:55]
 WARNING: [Synth 8-3936] Found unconnected internal register 'piplidi/C_out_reg' and it is trimmed from '8' to '4' bits. [/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.srcs/sources_1/new/PipeLine.vhd:55]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[26] )
-INFO: [Synth 8-3886] merging instance 'mem_ins/Sort_reg[27]' (FD) to 'mem_ins/Sort_reg[16]'
+INFO: [Synth 8-3886] merging instance 'mem_ins/Sort_reg[24]' (FD) to 'mem_ins/Sort_reg[10]'
+INFO: [Synth 8-3886] merging instance 'mem_ins/Sort_reg[25]' (FD) to 'mem_ins/Sort_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[14] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[12] )
@@ -324,69 +337,108 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/A_out_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/A_out_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/A_out_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/A_out_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/A_out_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[21] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[16] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[19] )
-INFO: [Synth 8-3886] merging instance 'mem_ins/Sort_reg[16]' (FD) to 'mem_ins/Sort_reg[8]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[1] )
+INFO: [Synth 8-3886] merging instance 'mem_ins/Sort_reg[18]' (FD) to 'mem_ins/Sort_reg[9]'
+INFO: [Synth 8-3886] merging instance 'mem_ins/Sort_reg[17]' (FD) to 'mem_ins/Sort_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[23] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_ins/Sort_reg[3] )
+INFO: [Synth 8-3886] merging instance 'mem_ins/Sort_reg[10]' (FD) to 'mem_ins/Sort_reg[11]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/B_out_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/B_out_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/B_out_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/B_out_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/A_out_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/A_out_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/A_out_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/A_out_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/A_out_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/A_out_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/A_out_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/OP_out_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/OP_out_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/OP_out_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/OP_out_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/OP_out_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/OP_out_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/C_out_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/OP_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/OP_out_reg[0] )
+INFO: [Synth 8-3886] merging instance 'piplidi/OP_out_reg[1]' (FD) to 'piplidi/OP_out_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/OP_out_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/C_out_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piplidi/C_out_reg[3] )
+INFO: [Synth 8-3886] merging instance 'piplidi/B_out_reg[2]' (FD) to 'piplidi/B_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'piplidi/A_out_reg[1]' (FD) to 'piplidi/C_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'piplidi/A_out_reg[0]' (FD) to 'piplidi/B_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pipdiex/B_out_reg[2]' (FD) to 'pipdiex/A_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'pipdiex/B_out_reg[3]' (FD) to 'pipdiex/A_out_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/B_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/B_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/B_out_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/B_out_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[3] )
+INFO: [Synth 8-3886] merging instance 'pipdiex/OP_out_reg[2]' (FD) to 'pipdiex/OP_out_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[0] )
+INFO: [Synth 8-3886] merging instance 'piplidi/OP_out_reg[2]' (FD) to 'piplidi/B_out_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\alea_cpt_di_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\alea_cpt_di_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\alea_cpt_di_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\alea_cpt_diex_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\alea_cpt_diex_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\alea_cpt_diex_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/A_out_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/A_out_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/A_out_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/A_out_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/OP_out_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipdiex/A_out_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/A_out_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/A_out_reg[2] )
+INFO: [Synth 8-3886] merging instance 'pipexmem/OP_out_reg[1]' (FD) to 'pipexmem/OP_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pipmemre/OP_out_reg[2]' (FD) to 'pipmemre/OP_out_reg[1]'
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[7]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[7]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[6]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[6]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[4]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[4]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[5]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[5]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[3]  is always disabled
+WARNING: [Synth 8-264] enable of latch \ual/Temp_res_reg[3]  is always disabled
+INFO: [Synth 8-3886] merging instance 'pipdiex/B_out_reg[1]' (FD) to 'pipdiex/OP_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pipexmem/B_out_reg[1]' (FD) to 'pipexmem/OP_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pipexmem/B_out_reg[2]' (FD) to 'pipexmem/B_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pipexmem/B_out_reg[3]' (FD) to 'pipexmem/A_out_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/B_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/B_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/B_out_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/OP_out_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/OP_out_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/OP_out_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/OP_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/OP_out_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/OP_out_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipexmem/B_out_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/A_out_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/A_out_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/A_out_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/A_out_reg[4] )
-INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[0]' (FDE_1) to 'mem_data/Sort_reg[7]'
-INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[1]' (FDE_1) to 'mem_data/Sort_reg[7]'
-INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[2]' (FDE_1) to 'mem_data/Sort_reg[7]'
-INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[3]' (FDE_1) to 'mem_data/Sort_reg[7]'
-INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[4]' (FDE_1) to 'mem_data/Sort_reg[7]'
-INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[5]' (FDE_1) to 'mem_data/Sort_reg[7]'
-INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[6]' (FDE_1) to 'mem_data/Sort_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_data/Sort_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/A_out_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/A_out_reg[2] )
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[15][0]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[15][0]  is always disabled
@@ -396,6 +448,14 @@ WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][0]  is alw
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][0]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][0]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[11][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[11][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[10][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[10][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[9][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[9][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[8][0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[8][0]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][0]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][0]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[6][0]  is always disabled
@@ -412,6 +472,14 @@ WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][1]  is alw
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][1]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][1]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[11][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[11][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[10][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[10][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[9][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[9][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[8][1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[8][1]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][1]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][1]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[6][1]  is always disabled
@@ -428,6 +496,14 @@ WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][2]  is alw
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][2]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][2]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[11][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[11][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[10][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[10][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[9][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[9][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[8][2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[8][2]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][2]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][2]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[6][2]  is always disabled
@@ -444,69 +520,60 @@ WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][3]  is alw
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][3]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][3]  is always disabled
 WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[6][3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[6][3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[5][3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[5][3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[4][3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[4][3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[15][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[15][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[14][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[14][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[6][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[6][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[5][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[5][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[4][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[4][4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[15][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[15][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[14][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[14][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[13][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[12][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[7][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[6][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[6][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[5][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[5][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[4][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[4][5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[15][6]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[15][6]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[14][6]  is always disabled
-WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[14][6]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[11][3]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[11][3]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[10][3]  is always disabled
+WARNING: [Synth 8-264] enable of latch \banc_registre/bancreg_reg[10][3]  is always disabled
 INFO: [Common 17-14] Message 'Synth 8-264' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[0]' (FDE_1) to 'mem_data/Sort_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[1]' (FDE_1) to 'mem_data/Sort_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[2]' (FDE_1) to 'mem_data/Sort_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[3]' (FDE_1) to 'mem_data/Sort_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[4]' (FDE_1) to 'mem_data/Sort_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[5]' (FDE_1) to 'mem_data/Sort_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mem_data/Sort_reg[6]' (FDE_1) to 'mem_data/Sort_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_data/Sort_reg[7] )
+INFO: [Synth 8-3886] merging instance 'pipmemre/B_out_reg[1]' (FD) to 'pipmemre/OP_out_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/B_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/B_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/B_out_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/OP_out_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipmemre/B_out_reg[7] )
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[15][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[14][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[13][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[12][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[11][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[10][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[9][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[8][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[7][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[6][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[5][0]' (LDC) to 'banc_registre/bancreg_reg[4][0]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[15][1]' (LDC) to 'banc_registre/bancreg_reg[4][1]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[14][1]' (LDC) to 'banc_registre/bancreg_reg[4][1]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[13][1]' (LDC) to 'banc_registre/bancreg_reg[4][1]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[12][1]' (LDC) to 'banc_registre/bancreg_reg[4][1]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[7][1]' (LDC) to 'banc_registre/bancreg_reg[4][1]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[6][1]' (LDC) to 'banc_registre/bancreg_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[15][1]' (LDC) to 'banc_registre/bancreg_reg[14][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[14][1]' (LDC) to 'banc_registre/bancreg_reg[13][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[13][1]' (LDC) to 'banc_registre/bancreg_reg[12][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[12][1]' (LDC) to 'banc_registre/bancreg_reg[11][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[11][1]' (LDC) to 'banc_registre/bancreg_reg[10][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[10][1]' (LDC) to 'banc_registre/bancreg_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[9][1]' (LDC) to 'banc_registre/bancreg_reg[8][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[8][1]' (LDC) to 'banc_registre/bancreg_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[7][1]' (LDC) to 'banc_registre/bancreg_reg[6][1]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[6][1]' (LDC) to 'banc_registre/bancreg_reg[5][1]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[5][1]' (LDC) to 'banc_registre/bancreg_reg[4][1]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[15][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[14][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[13][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[12][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[11][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[10][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[9][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[8][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[7][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[6][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[5][2]' (LDC) to 'banc_registre/bancreg_reg[4][2]'
@@ -514,37 +581,37 @@ INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[15][3]' (LDC) t
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[14][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[13][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[12][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[11][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[10][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[9][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[8][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[7][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[6][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
 INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[5][3]' (LDC) to 'banc_registre/bancreg_reg[4][3]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[15][4]' (LDC) to 'banc_registre/bancreg_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[14][4]' (LDC) to 'banc_registre/bancreg_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[13][4]' (LDC) to 'banc_registre/bancreg_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[12][4]' (LDC) to 'banc_registre/bancreg_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[7][4]' (LDC) to 'banc_registre/bancreg_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[6][4]' (LDC) to 'banc_registre/bancreg_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[5][4]' (LDC) to 'banc_registre/bancreg_reg[4][4]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[15][5]' (LDC) to 'banc_registre/bancreg_reg[4][5]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[14][5]' (LDC) to 'banc_registre/bancreg_reg[4][5]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[13][5]' (LDC) to 'banc_registre/bancreg_reg[4][5]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[12][5]' (LDC) to 'banc_registre/bancreg_reg[4][5]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[7][5]' (LDC) to 'banc_registre/bancreg_reg[4][5]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[6][5]' (LDC) to 'banc_registre/bancreg_reg[4][5]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[5][5]' (LDC) to 'banc_registre/bancreg_reg[4][5]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[15][6]' (LDC) to 'banc_registre/bancreg_reg[4][6]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[14][6]' (LDC) to 'banc_registre/bancreg_reg[4][6]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[13][6]' (LDC) to 'banc_registre/bancreg_reg[4][6]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[12][6]' (LDC) to 'banc_registre/bancreg_reg[4][6]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[7][6]' (LDC) to 'banc_registre/bancreg_reg[4][6]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[6][6]' (LDC) to 'banc_registre/bancreg_reg[4][6]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[5][6]' (LDC) to 'banc_registre/bancreg_reg[4][6]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[15][7]' (LDC) to 'banc_registre/bancreg_reg[4][7]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[14][7]' (LDC) to 'banc_registre/bancreg_reg[4][7]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[13][7]' (LDC) to 'banc_registre/bancreg_reg[4][7]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[12][7]' (LDC) to 'banc_registre/bancreg_reg[4][7]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[7][7]' (LDC) to 'banc_registre/bancreg_reg[4][7]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[6][7]' (LDC) to 'banc_registre/bancreg_reg[4][7]'
-INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[5][7]' (LDC) to 'banc_registre/bancreg_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[3][4]' (LDC) to 'banc_registre/bancreg_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[2][4]' (LDC) to 'banc_registre/bancreg_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[1][4]' (LDC) to 'banc_registre/bancreg_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[0][4]' (LDC) to 'banc_registre/bancreg_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[3][5]' (LDC) to 'banc_registre/bancreg_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[2][5]' (LDC) to 'banc_registre/bancreg_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[1][5]' (LDC) to 'banc_registre/bancreg_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[0][5]' (LDC) to 'banc_registre/bancreg_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[3][6]' (LDC) to 'banc_registre/bancreg_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[2][6]' (LDC) to 'banc_registre/bancreg_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[1][6]' (LDC) to 'banc_registre/bancreg_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[0][6]' (LDC) to 'banc_registre/bancreg_reg[0][7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[15][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[14][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[13][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[12][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[11][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[10][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[9][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[8][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[7][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[6][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\banc_registre/bancreg_reg[5][4] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[15]) is unused and will be removed from module processor.
 WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[14]) is unused and will be removed from module processor.
 WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[13]) is unused and will be removed from module processor.
@@ -553,6 +620,14 @@ WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[11]) is unused and 
 WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[10]) is unused and will be removed from module processor.
 WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[9]) is unused and will be removed from module processor.
 WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[8]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (ual/Temp_res_reg[0]) is unused and will be removed from module processor.
 WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[0][7]) is unused and will be removed from module processor.
 WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[0][6]) is unused and will be removed from module processor.
 WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[0][5]) is unused and will be removed from module processor.
@@ -637,17 +712,15 @@ WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[10][7]) is unused an
 WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[10][6]) is unused and will be removed from module processor.
 WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[10][5]) is unused and will be removed from module processor.
 WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[10][4]) is unused and will be removed from module processor.
-WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[10][3]) is unused and will be removed from module processor.
-WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[10][2]) is unused and will be removed from module processor.
-WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[10][1]) is unused and will be removed from module processor.
-WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[10][0]) is unused and will be removed from module processor.
-WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[11][7]) is unused and will be removed from module processor.
-WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[11][6]) is unused and will be removed from module processor.
-WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[11][5]) is unused and will be removed from module processor.
-WARNING: [Synth 8-3332] Sequential element (mem_data/md_reg[11][4]) is unused and will be removed from module processor.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'pipmemre/B_out_reg[2]' (FD) to 'pipmemre/B_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pipmemre/A_out_reg[0]' (FD) to 'pipmemre/B_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[3][2]' (LDC) to 'banc_registre/bancreg_reg[3][3]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[2][2]' (LDC) to 'banc_registre/bancreg_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[1][2]' (LDC) to 'banc_registre/bancreg_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'banc_registre/bancreg_reg[0][2]' (LDC) to 'banc_registre/bancreg_reg[0][3]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107668 ; free virtual = 137763
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8311 ; free virtual = 19738
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -659,13 +732,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:52 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107566 ; free virtual = 137661
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8194 ; free virtual = 19620
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:52 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107540 ; free virtual = 137636
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8191 ; free virtual = 19618
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -676,9 +749,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'piplidi/A_out_reg[3]' (FDR) to 'piplidi/B_out_reg[0]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107538 ; free virtual = 137634
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8192 ; free virtual = 19619
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -702,7 +774,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107538 ; free virtual = 137634
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8192 ; free virtual = 19619
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -715,7 +787,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107538 ; free virtual = 137634
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8192 ; free virtual = 19619
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -727,25 +799,41 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107538 ; free virtual = 137634
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8192 ; free virtual = 19619
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107538 ; free virtual = 137634
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8192 ; free virtual = 19619
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107538 ; free virtual = 137634
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8192 ; free virtual = 19619
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107538 ; free virtual = 137634
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8192 ; free virtual = 19619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|processor   | pipmemre/A_out_reg[1]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|processor   | pipmemre/B_out_reg[0]  | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|processor   | pipmemre/OP_out_reg[1] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -762,55 +850,51 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    10|
-|3     |LUT1   |     1|
-|4     |LUT2   |    38|
-|5     |LUT3   |    18|
-|6     |LUT4   |    36|
-|7     |LUT5   |    22|
-|8     |LUT6   |    63|
-|9     |FDRE   |    86|
-|10    |LD     |     8|
-|11    |LDC    |    64|
-|12    |IBUF   |     2|
-|13    |OBUF   |    16|
+|2     |LUT1   |     2|
+|3     |LUT2   |     5|
+|4     |LUT3   |     9|
+|5     |LUT4   |     3|
+|6     |LUT5   |     2|
+|7     |LUT6   |     8|
+|8     |SRL16E |     4|
+|9     |FDRE   |    22|
+|10    |LDC    |    12|
+|11    |IBUF   |     2|
+|12    |OBUF   |    16|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------+-----------+------+
 |      |Instance        |Module     |Cells |
 +------+----------------+-----------+------+
-|1     |top             |           |   365|
-|2     |  banc_registre |BR         |    96|
-|3     |  mem_ins       |MI         |    25|
-|4     |  pipdiex       |PipeLine   |   102|
-|5     |  pipexmem      |PipeLine_0 |    22|
-|6     |  piplidi       |PipeLine_1 |    30|
-|7     |  pipmemre      |PipeLine_2 |    22|
-|8     |  ual           |ALU        |    24|
+|1     |top             |           |    86|
+|2     |  banc_registre |BR         |    21|
+|3     |  mem_ins       |MI         |    11|
+|4     |  pipexmem      |PipeLine   |     4|
+|5     |  piplidi       |PipeLine_0 |     5|
+|6     |  pipmemre      |PipeLine_1 |     8|
 +------+----------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107538 ; free virtual = 137634
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8192 ; free virtual = 19619
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2285 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1670.281 ; gain = 139.434 ; free physical = 107593 ; free virtual = 137690
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1670.281 ; gain = 498.816 ; free physical = 107603 ; free virtual = 137699
+Synthesis finished with 0 errors, 0 critical warnings and 2460 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1675.230 ; gain = 139.453 ; free physical = 8243 ; free virtual = 19670
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1675.230 ; gain = 503.789 ; free physical = 8255 ; free virtual = 19682
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 72 instances were transformed.
-  LD => LDCE: 8 instances
-  LDC => LDCE: 64 instances
+  A total of 12 instances were transformed.
+  LDC => LDCE: 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-266 Infos, 231 Warnings, 0 Critical Warnings and 0 Errors encountered.
+326 Infos, 230 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 1670.281 ; gain = 510.461 ; free physical = 107594 ; free virtual = 137691
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1675.230 ; gain = 515.414 ; free physical = 8244 ; free virtual = 19671
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/seta/Documents/4A/Semestre 8/SI/Projet_SI/processeur_si.runs/synth_1/processor.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file processor_utilization_synth.rpt -pb processor_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1694.293 ; gain = 0.000 ; free physical = 107597 ; free virtual = 137694
-INFO: [Common 17-206] Exiting Vivado at Mon May 29 22:31:10 2023...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1699.242 ; gain = 0.000 ; free physical = 8245 ; free virtual = 19671
+INFO: [Common 17-206] Exiting Vivado at Tue May 30 12:36:59 2023...
